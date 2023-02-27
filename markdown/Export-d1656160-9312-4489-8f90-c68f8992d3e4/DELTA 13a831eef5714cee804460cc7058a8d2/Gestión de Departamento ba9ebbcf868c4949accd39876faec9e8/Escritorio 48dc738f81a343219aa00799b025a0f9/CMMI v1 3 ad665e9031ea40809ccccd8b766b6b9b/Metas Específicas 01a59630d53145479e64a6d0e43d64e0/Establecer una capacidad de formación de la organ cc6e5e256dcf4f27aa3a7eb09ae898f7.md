@@ -1,0 +1,5 @@
+# Establecer una capacidad de formación de la organización
+
+Número de meta: 1
+Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20las%20necesidades%20estrate%CC%81gicas%20de%20formac%20f6238e63d8ca4ae0aef659d6095564f3.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Determinar%20que%20necesidades%20de%20formacio%CC%81n%20son%20respo%2067bfc8b075634f10bc3c33dd6a186521.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20un%20plan%20ta%CC%81ctico%20de%20formacio%CC%81n%20en%20la%20or%20fd7079c074764c8f862b41e08f045d47.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20una%20capacidad%20de%20formacio%CC%81n%20bb322f5b84c3425c849cf786651514b5.md
+Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Formacio%CC%81n%20en%20la%20Organizacio%CC%81n%209f260d1ca04a47d6aa0348a86757c682.md

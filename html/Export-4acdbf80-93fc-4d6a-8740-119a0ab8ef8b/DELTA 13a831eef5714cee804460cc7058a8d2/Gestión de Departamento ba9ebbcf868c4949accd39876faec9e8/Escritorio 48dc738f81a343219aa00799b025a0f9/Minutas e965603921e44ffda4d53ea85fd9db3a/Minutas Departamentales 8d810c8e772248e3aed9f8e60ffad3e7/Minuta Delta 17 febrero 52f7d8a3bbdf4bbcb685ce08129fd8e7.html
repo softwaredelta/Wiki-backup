@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Minuta Delta 17 febrero</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="52f7d8a3-bbdf-4bbc-b685-ce08129fd8e7" class="page sans"><header><h1 class="page-title">Minuta Delta 17 febrero</h1></header><div class="page-body"><h1 id="da8aa5ca-3d59-476e-8ce5-be6c36810200" class="">Minuta reuníón 17 de febrero</h1><h2 id="d80683d5-21da-45d5-a4d4-dc24fee04b3d" class="">Objetivos</h2><ul id="8bf641f2-2544-4a26-b57c-e9fc96428d7a" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Documentación</span></li></ul><ul id="ca40940f-9faf-441b-a6a6-c36de21a2f0c" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Calendario de juntas (con clientes y equipo)</span></li></ul><ul id="47e98344-a680-433d-9d70-0ae948c7b42d" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">¿Qué puntos claves se hablarán con los socios el lunes y martes?</span></li></ul><ul id="6b87cb8c-ebb9-4bc6-9774-74f88c917472" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">¿Qué haremos próxima junta?</span></li></ul><ul id="3500e30f-585c-45d3-8c6d-83453f2b7abf" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Consideraciones:</span><ul id="a2d11693-b76d-42b9-ba68-0a4b5583b854" class="bulleted-list"><li style="list-style-type:disc">Identificación de riesgos, metas financieras</li></ul><ul id="94b7c434-13ac-4da8-aed9-39b8d3faaeda" class="bulleted-list"><li style="list-style-type:disc">Forma de contacto con usuarios finales</li></ul><ul id="9d9c736a-3271-4fdb-a13a-b272adc6dfe8" class="bulleted-list"><li style="list-style-type:disc">Determinar el inicio y final del sistema</li></ul></li></ul><h2 id="c2b4a402-ae70-45fb-b519-9dfc57cfcfee" class="">Compromisos generados</h2><p id="8d42c66d-f573-4d1f-9d92-9dcbddea499d" class="">Todos los miembros del grupo se comprometen a trabajar responsablemente y con diligencia, por lo que algunos integrantes no estarán disponibles terminando las clases a las 8 pm y los fines de semana. Sin embargo, reconocen que en caso de que la situación lo amerite y/o su desempeño entre semana no haya sido el adecuado, harán una excepción a la regla de dejar dichos horarios libres.</p><h3 id="5e157897-8076-413f-a6fd-84c709f5ac53" class="">Documentación </h3><h3 id="aefc2508-f554-45f4-a44b-d94379b42bd9" class="">Resumen</h3><p id="ae12b987-7b0a-4cf0-85c5-de99bedbc1e5" class="">Se discutieron distintos métodos para generar la documentación del proyecto. Llegando al acuerdo de usar Drive como hub principal de la documentación del departamento, así como se seleccionaron los distintos responsables de algunas actividades relacionadas con la documentación.</p><h3 id="99d32905-508c-4fb0-b8cc-7acada6d2cdf" class="">¿Qué?</h3><ul id="cadc0de6-26f7-4d52-96aa-59dcb3e082ce" class="bulleted-list"><li style="list-style-type:disc">Proceso de documentación</li></ul><h3 id="62caf8ee-60c2-4f59-a7f2-a2c864ef65ae" class="">Cómo?</h3><ul id="0ece18a7-29dd-435c-8e2c-00d2c73638e4" class="bulleted-list"><li style="list-style-type:disc">Agregar todos los documentos en drive</li></ul><h3 id="2205210a-200b-4ca7-9a55-082c086b9f71" class="">Quién?</h3><ul id="52028a3d-d42e-4074-a16c-7b43aca155b0" class="bulleted-list"><li style="list-style-type:disc">Kenny - Dirigió la discusión, estructura en Drive, bitácoras de experimentos, generar documento de procesos, así como agregar el proceso de documentación</li></ul><ul id="fd0b02bd-5069-476b-9afe-9bf27d06dc1a" class="bulleted-list"><li style="list-style-type:disc">Fermín - Generar documento de proceso de celebration grid, así como agendar las reuniones de al menos una hora (a más tardar el 24 de febrero)</li></ul><ul id="e8715896-24c6-4142-94ae-a96f0246e6b5" class="bulleted-list"><li style="list-style-type:disc">Alfredo - Generar minutas y agregarlas a Drive a su respectiva carpeta</li></ul><ul id="3019f931-7d46-4dda-b04d-f21a17b99b8b" class="bulleted-list"><li style="list-style-type:disc">Monica - Generar documento de planeación (cosas que tenemos que hacer) y experimentos (y sus encargados de llevarlos a cabo)</li></ul><h3 id="3b1fb369-39ca-4060-89b7-721fd84d7bf0" class="">Calendario </h3><h3 id="06196e35-122f-4158-8cd6-b12bed7007bb" class="">Resumen</h3><p id="fed72ef9-5d46-40eb-a8c2-bd58c7a00ddd" class="">Se discutió de las diferentes herramientas que podemos usar para ponernos de acuerdo con nuestros horarios, when2meet, google calendar, etc.</p><p id="caeac08f-c66d-4699-9e0e-79d560f9ae7d" class="">Se generó un <a href="https://www.when2meet.com/?18852978-pbOc7">when2meet</a> donde señalemos en qué horarios no estamos disponibles.</p><h3 id="1880a9d5-0a06-4b49-a522-1ade1c14db00" class="">Qué?</h3><ul id="86e607bb-543d-48d2-bec8-92eee4c67f42" class="bulleted-list"><li style="list-style-type:disc">Calendario</li></ul><h3 id="ccf6b479-bbbf-48a8-99a5-16ffd92fd7c7" class="">Quién?</h3><ul id="da0ef2a1-ae30-4057-b133-dda992293344" class="bulleted-list"><li style="list-style-type:disc">Olivia propone usar when2meet para seleccionar qué horarios no estamos disponibles</li></ul><ul id="ac19f384-628f-4b14-ba86-dc5ac1dfb538" class="bulleted-list"><li style="list-style-type:disc">Moni propone usar calendar para incluir nuestros horarios y saber qué está usando cada uno. La propuesta fue descartada</li></ul><h3 id="a382b665-5b28-4042-9382-9a26ad61e32d" class="">Expectativas del equipo</h3><h3 id="98b30811-8148-4f9b-a99a-1c1b2f3ef2a6" class="">Resumen</h3><p id="936832ea-80c1-4486-9e51-6162b1c7b65b" class="">Los miembros del departamento dieron voz a sus expectativas y preferencias con respecto al trabajo en los proyectos. Además de que se generaron compromisos sobre nuestra disponibilidad y forma de trabajo.</p><h3 id="871d8af5-2f7c-48fb-9421-68a547e6b190" class="">Qué?</h3><ul id="a5668418-07a8-4e01-8527-ae416e73d3cd" class="bulleted-list"><li style="list-style-type:disc">Cuáles son las expectativas del equipo para con el proyecto</li></ul><h3 id="5c3c2d77-b3ad-4943-9d65-1fee32c06df4" class="">Quién?</h3><ul id="f6b0f57f-14dd-4e36-8038-5d97bb6b6b25" class="bulleted-list"><li style="list-style-type:disc">Fermín - dirigió la discusión</li></ul><table id="2ce50a3b-70af-437b-b205-c9dd5bda036c" class="simple-table"><tbody><tr id="7bac8a90-a8a8-4fbc-83eb-a50444bfa47a"><td id="ITsm" class="">Persona</td><td id="RvvM" class="">Expectativas</td><td id="k;z;" class="">Cosas que preferiríamos no hacer</td></tr><tr id="cbaa8ecd-2905-48e4-b0b1-9d9ed5886366"><td id="ITsm" class="">Fermín</td><td id="RvvM" class="">Exceder expectativas del socio formador</td><td id="k;z;" class="">Ocupado de 2 a 4 am en representativos, respetar horarios de taller</td></tr><tr id="83b2b542-83bc-438c-b144-cca2c8b96e99"><td id="ITsm" class="">Muñóz</td><td id="RvvM" class="">Exceder y generar currículum</td><td id="k;z;" class="">–</td></tr><tr id="fa97b3cd-9d09-497a-bdb1-83e7a957a4ac"><td id="ITsm" class="">Kenny</td><td id="RvvM" class="">Exceder, llegar a nivel 3 del CMMI</td><td id="k;z;" class="">No trabajar en fines de semana y las noche después de clase.</td></tr><tr id="fa9aab95-210b-4343-bfd6-0d84ff6d5410"><td id="ITsm" class="">Emi</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar los viernes por la noche, respetar horarios de 1 a 3 pm por talleres</td></tr><tr id="4de30072-ca95-4e4e-aaef-1356b304ebaf"><td id="ITsm" class="">Olivia</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">–</td></tr><tr id="4d51a848-1918-4fec-9367-2c12f59f52ea"><td id="ITsm" class="">Jorge</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">–</td></tr><tr id="c469f9e0-8573-480f-b465-c457104ea0ec"><td id="ITsm" class="">Acevedo</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar los domingos</td></tr><tr id="4082dd17-386b-4702-abf6-1dcf61c06728"><td id="ITsm" class="">Emiliano</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar mucho extra en fines de semana</td></tr><tr id="79ed4adb-6f87-4eaa-a95d-f1417f3c107a"><td id="ITsm" class="">Renato</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar fines de semana</td></tr><tr id="ba1644f7-26b3-4c2e-a0d5-438bef0a5b80"><td id="ITsm" class="">Javier</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar fines de semana</td></tr><tr id="a6189441-3591-49e6-83d3-cf75a257b502"><td id="ITsm" class="">Moni</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">Respetar negativas de disponibilidad</td></tr><tr id="5628f491-1cf6-426d-a1d3-79baee79a02c"><td id="ITsm" class="">Cristian</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No presencialidad los fines de semana</td></tr><tr id="764d895b-591d-497f-9486-a9b7b66a6a26"><td id="ITsm" class="">Alfredo</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">Respetar horarios laborales matutinos</td></tr><tr id="7438a95c-c32f-4389-b0c6-91416840f52b"><td id="ITsm" class="">Alex</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">Respetar horarios no disponibles</td></tr><tr id="9f38357a-f61d-4a46-9950-c85f61214fbb"><td id="ITsm" class="">Karen</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar fines de semana</td></tr><tr id="4d6071ff-2523-4982-8c91-172f27fc190d"><td id="ITsm" class="">Ian</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">Respetar horarios laborales matutinos</td></tr><tr id="d3aeaa02-d9f5-4499-ad0a-31b1270a6e47"><td id="ITsm" class="">Jordana</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">Dejar fines de semana libres</td></tr><tr id="c8d803f1-7024-4843-9759-eb6e4cba975f"><td id="ITsm" class="">Ángel</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">No trabajar fines de semana</td></tr><tr id="1b01db4d-52cb-404a-934a-4a1f0352412b"><td id="ITsm" class="">Arisbeth</td><td id="RvvM" class="">Exceder</td><td id="k;z;" class="">Dejar los fines de semana libres</td></tr></tbody></table><p id="0b96674a-2c6f-4ed1-9c43-4a83b2e5671d" class=""><strong>Qué es exceder?</strong> Alcanzar cmmi nivel 3, superar las expectativas del socio formador y generar un proyecto que pueda aportar a nuestro CV</p><h3 id="559597bc-8ab5-49a0-be94-5c6db1e77990" class="">Socios (10 min)</h3><h3 id="6fbd2445-c520-4d4b-9b81-fbc351809fcd" class="">Resumen</h3><h3 id="4c51b033-6454-4f96-bdec-4d600d45fc03" class="">Quién?</h3><ul id="7bf7e9e0-c4a7-44a4-9d98-526949615720" class="bulleted-list"><li style="list-style-type:disc">Karen - Dirigió la discusión</li></ul><h3 id="39ca5c5e-3703-4830-93af-fb71ec5afdfe" class="">Qué?</h3><h3 id="9ce1b62f-0203-49c9-a7a6-0320467562e6" class="">Inforación a conseguir</h3><ul id="8d08e29c-fc45-4b0c-a5a9-007d521be9a0" class="bulleted-list"><li style="list-style-type:disc">Conseguir información sobre recursos tecnológicos y presupuesto monetario</li></ul><ul id="afb8e071-c220-404e-b8b3-183a51eb2312" class="bulleted-list"><li style="list-style-type:disc">Reuniones en horarios fijos o al menos horarios de disponibilidad</li></ul><ul id="d4fc251b-6541-4419-bf63-d235913ceb8a" class="bulleted-list"><li style="list-style-type:disc">Hacer shadowing o planear hacerlo</li></ul><ul id="8ead83b0-21ce-46d8-8229-932a3c909262" class="bulleted-list"><li style="list-style-type:disc">Definir o comenzar a definir la necesidad</li></ul><ul id="3c149a13-4caa-4420-b8d6-517327fb958e" class="bulleted-list"><li style="list-style-type:disc">Identificar stakeholders/involucrados (con esta información se hará un impact mapping)</li></ul><ul id="8aae6729-424b-4d5e-856a-bc653b1c6b1a" class="bulleted-list"><li style="list-style-type:disc">Documentación sobre proyectos/procesos que sería útiles para el desarrollo. ¿Qué podemos usar/dar más valor?</li></ul><ul id="4c7afd53-6c61-4741-a708-f29e05317408" class="bulleted-list"><li style="list-style-type:disc">Conseguir información de contacto con usuarios finales</li></ul><h3 id="2a23b64c-22d2-4e05-966a-f01aef5795a6" class="">Planes generados</h3><ul id="9d27eb6b-95a3-40db-97cd-f48a7a0dfbfb" class="bulleted-list"><li style="list-style-type:disc">24 de febrero<ul id="81a670a1-914c-44de-a6dc-1a08ef1e3ddc" class="bulleted-list"><li style="list-style-type:circle">Validación de requisitos objetivos y módulos con el socio</li></ul><ul id="38290c31-2300-4855-824f-96a1d4828781" class="bulleted-list"><li style="list-style-type:circle">En caso de que las juntas con los respectivo SF sean fructífera, generar un prototipo de alto nivel para validar con los socios</li></ul><ul id="07eb95f1-58a0-4ce6-a100-2236372a913b" class="bulleted-list"><li style="list-style-type:circle">Firma de confirmación módulos del proyecto (User Story Mapping)</li></ul><ul id="3c55bf29-bffb-4d12-8ffa-a0b7d0133a0a" class="bulleted-list"><li style="list-style-type:circle">Tener lista la propuesta de requerimientos</li></ul></li></ul><ul id="25bdad70-4aed-452f-89f1-55bd9969b867" class="bulleted-list"><li style="list-style-type:disc">Se planteó la idea de crear un club de lectura, para que se expongan capítulos/secciones de algún libro de bibliografía recomendada</li></ul><ul id="b9035ade-217d-49c0-9334-c04f604b181c" class="bulleted-list"><li style="list-style-type:disc">Generar estimaciones de las actividades</li></ul><ul id="0ec3b4db-8914-454c-a04e-75cb92031f3c" class="bulleted-list"><li style="list-style-type:disc">21 de marzo<ul id="fdd7f600-5938-4401-80d3-ab27c7e9824a" class="bulleted-list"><li style="list-style-type:circle">Haber leído alguna parte del CMMI para dudas con Lalo</li></ul><p id="3e29f1ef-05d3-49d4-8848-d8edc46c9196" class="">
+</p></li></ul></div></article></body></html>

@@ -1,0 +1,5 @@
+# Ensamblar los componentes del producto y entregar el producto
+
+Número de meta: 3
+Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Confirmar%20la%20disponibilidad%20de%20los%20componentes%20de%20%20896d4a9337df42b590106fc953f02382.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Ensamblar%20los%20componentes%20de%20producto%203c7fcfb8e9834664bd6c93217949581c.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Evaluar%20los%20componentes%20de%20producto%20ensamblados%200d8a24b9ce7f4a39b905e7445820c724.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Empaquetar%20y%20entregar%20el%20producto%20o%20componente%20de%20%20c68fab60d37141f78a79e0ca99b390e8.md
+Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Integracio%CC%81n%20del%20Producto%2086cd953694034d4eae9de8f0aafa84d1.md

@@ -1,0 +1,5 @@
+# Establecer las líneas base y los modelos de rendimiento
+
+Número de meta: 1
+Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20los%20objetivos%20de%20calidad%20y%20rendimiento%20%20a6ad274b1bea4e5097d75cabe45e43c0.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20las%20medidas%20de%20rendimiento%20de%20proceso%20e5106f679cd64620b957179c2759053a.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Seleccionar%20los%20procesos%20fe8a6988f4ae45868e7b409f2e85e5b9.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Analizar%20el%20rendimiento%20de%20proceso%20y%20establecer%20la%201649870177494bbba6143e34e762a739.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20los%20modelos%20de%20rendimiento%20de%20proceso%203f810660083a44c5a5db7266c2fdebdb.md
+Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Rendimiento%20de%20Procesos%20de%20la%20Organizacio%CC%81n%20420c4870d73849e4b1025dedda4fc60a.md

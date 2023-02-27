@@ -1,0 +1,19 @@
+﻿Name,Assign,Description,Status,Tag
+Pain/Gain Map,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza, Fabián Enrique Avilés Cortés, Ricardo Nuñez Alanis, Cristian Rico, Emiliano Vásquez Olea, Andres, Olivia Araceli Morales Quezada",Mapa con el propósito de identificar los puntos negativos de su proceso actual para cada tipo de usuario y análisis de como la solución elimina dichos puntos y genera valor.,Done,Maps
+Impact Mapping,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza, Fabián Enrique Avilés Cortés, Ricardo Nuñez Alanis, Cristian Rico, Emiliano Vásquez Olea, Andres, Olivia Araceli Morales Quezada","El Impact Mapping nos permite analizar quiénes son los actores involucrados en la necesidad, qué acciones llevan a cabo y nosotros como equipo de desarrollo establecemos un objetivo y los puntos a “atacar”.",Done,Maps
+Modulos,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza, Fabián Enrique Avilés Cortés, Ricardo Nuñez Alanis, Cristian Rico, Emiliano Vásquez Olea, Andres, Olivia Araceli Morales Quezada","Módulos a desarrollar que buscan solventar la necesidad del cliente. También se incluye un MoSCoW Chart, primera priorización de módulos, alcance y el MVP",Review,Maps
+Diagrama de Arquitectura,Emiliano Vásquez Olea,"Propuestas actuales de tecnologías a utilizar en el desarrollo del proyecto de Michelín. Aún se requieren más componentes.
+• Unity
+• React
+• Tailwind CSS
+• Fastify
+• mySQL
+Control de Versiones:
+• GitHub
+• Plastic SCM???",Review,Maps
+Prototipo Web,"Arisbeth Aguirre Pontaza, Olivia Araceli Morales Quezada, Jorge Guerrero Díaz","Prototipo en Web, que cubre las pantallas de Login, Administracion de Usuarios y Puntos de Venta y Preguntas",In progress,Diseños
+Prototipo Movil,Ricardo Nuñez Alanis,"Propuestas del diseño movil en figma, donde se ven las patañas de log in, seleccion de recorrido, exterior, interior y partes del cuestionario",In progress,Diseños
+BackLog,,,Not started,
+MER,"Emiliano Vásquez Olea, Olivia Araceli Morales Quezada, Ricardo Nuñez Alanis",,Not started,
+Definicion de CU (Story),,,Not started,
+Diccionario de datos,"Cristian Rico, Andres, Fabián Enrique Avilés Cortés",,Not started,

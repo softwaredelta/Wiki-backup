@@ -1,0 +1,5 @@
+# Preparar la gestión cuantitativa
+
+Número de meta: 1
+Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20los%20objetivos%20del%20proyecto%20ea1e17416914450e9479874c88707707.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Componer%20el%20proceso%20definido%2037e9a70a4d20465eaf9bbc0aad821b06.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Seleccionar%20los%20subprocesos%20y%20los%20atributos%20ada81ab3196c4d2bb6e8de4772b5e984.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Seleccionar%20las%20medidas%20y%20las%20te%CC%81cnicas%20anali%CC%81tica%200d1e5808c65546c2ae983c4bb9023f3a.md
+Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Gestio%CC%81n%20Cuantitativa%20del%20Proyecto%20dba236ec00424cc0bb52728fcbc441a7.md

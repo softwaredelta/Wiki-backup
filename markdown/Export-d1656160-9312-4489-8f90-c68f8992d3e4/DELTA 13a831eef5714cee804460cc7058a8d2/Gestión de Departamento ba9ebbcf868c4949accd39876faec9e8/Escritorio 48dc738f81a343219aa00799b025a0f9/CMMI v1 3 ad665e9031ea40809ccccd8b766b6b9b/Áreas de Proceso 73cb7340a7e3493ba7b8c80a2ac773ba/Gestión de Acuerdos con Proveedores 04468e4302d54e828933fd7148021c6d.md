@@ -1,0 +1,8 @@
+# Gestión de Acuerdos con Proveedores
+
+Abreviación: SAM
+Book Link: https://resources.sei.cmu.edu/asset_files/whitepaper/2010_019_001_28782.pdf#page=452
+Metas Específicas: ../Metas%20Especi%CC%81ficas%2001a59630d53145479e64a6d0e43d64e0/Establecer%20acuerdos%20con%20proveedores%20be3ff60a391b44ddb7f41a3467e14a07.md, ../Metas%20Especi%CC%81ficas%2001a59630d53145479e64a6d0e43d64e0/Satisfacer%20los%20acuerdos%20con%20proveedores%20898fc0b135c9403a89db6c3b5c1ac6e7.md
+Nivel de Madurez: 2
+Propósito: El propósito de la Gestión de Acuerdos con Proveedores (SAM) es gestionar la adquisición de productos y servicios de proveedores
+Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Ejecutar%20el%20acuerdo%20con%20el%20proveedor%20d44885df700d4ea5ad764252d4f7ce79.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Asegurar%20la%20transicio%CC%81n%20de%20los%20productos%205684c5d9ec9849f8b824ca86b462d3f3.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20acuerdos%20con%20proveedores%20a07cc5e1a0b343afb38f4ee306e463f1.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Determinar%20el%20tipo%20de%20adquisicio%CC%81n%20faea36a42047461a910c118c9a40f32a.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Aceptar%20el%20producto%20adquirido%20ef01b218dcd247f59b41fddbd6bf31e2.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Seleccionar%20a%20los%20proveedores%20173eddd498d444559b5a8173aa692854.md
