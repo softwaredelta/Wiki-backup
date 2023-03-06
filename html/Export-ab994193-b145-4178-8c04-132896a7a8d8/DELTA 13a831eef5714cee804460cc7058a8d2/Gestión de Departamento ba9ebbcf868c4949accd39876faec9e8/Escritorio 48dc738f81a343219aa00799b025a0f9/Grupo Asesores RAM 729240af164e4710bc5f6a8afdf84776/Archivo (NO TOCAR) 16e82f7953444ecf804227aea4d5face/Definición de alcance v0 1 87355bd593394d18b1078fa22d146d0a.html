@@ -1,0 +1,695 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Definición de alcance v0.1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="87355bd5-9339-4d18-b107-8fa22d146d0a" class="page sans"><header><img class="page-cover-image" src="https://i.pinimg.com/736x/99/fa/00/99fa00eeccdaf09a0af865fe6a641d47.jpg" style="object-position:center 29.600000000000005%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📃</span></div><h1 class="page-title">Definición de alcance v0.1</h1></header><div class="page-body"><p id="2457fc46-e61f-48b5-95aa-29e4d56ebcb6" class=""><strong>ESPECIFICACIÓN DE MODULOS DE SOFTWARE</strong></p><p id="74ea792c-8699-434f-a28b-f6e95b1487a7" class=""><strong>SISTEMA DE SEGUIMIENTO Y GESTIÓN DE INFORMACIÓN PARA </strong><em><strong>GRUPO ASESORES RAM®</strong></em></p><figure id="7b3dc06a-c7c0-4a54-83c8-7eb9ab75a87d" class="image"><a href="../../Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Definicio%CC%81n%20de%20Alcance%20ca920809c33b4daeb7cecc1d35bc67c6/image2.png"><img style="width:500px" src="../../Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Definicio%CC%81n%20de%20Alcance%20ca920809c33b4daeb7cecc1d35bc67c6/image2.png"/></a></figure><p id="92ddbe73-037e-4d29-9787-b2ed7ab7eae9" class="">21/02/2023</p><p id="ee1527b0-69cd-4859-9965-2270399076db" class="">
+</p><h2 id="07f22b8b-dba6-4e28-ab81-ef9a1c7a6560" class="">Simbología</h2><h3 id="42d498bf-9054-4f1e-904a-b0efbdeece72" class="">Tipos de usuarios (Roles)</h3><p id="9a80a170-47c8-4435-9f73-5ca50810c560" class="">[M] - Administrador</p><p id="7caa77fc-0f05-451d-98cb-7acf18a2d286" class="">[G] - Gerente</p><p id="80de55f3-18de-416c-9996-51781c4c6710" class="">[A] - Agente</p><h2 id="1a371473-4781-445e-850a-640b2f324362" class=""><strong>Módulos (PRIORIZADOS)</strong></h2><ol type="1" id="60dd7f6a-0625-4dc1-9eec-626f7c49f9bf" class="numbered-list" start="1"><li><strong><em>CURSOS</em></strong></li></ol><p id="ec034c7f-6c31-4f9e-8d2e-cd75e671e307" class="">Gerentes conocen el progreso general y particular de los agentes en la realización de cursos de capacitación. Agentes consultan y actualizan su progreso en el cumplimiento de cursos. Administrador gestiona los cursos en el sistema.</p><p id="f54ac970-38e8-40f9-a86c-e74f2bb58574" class="">
+</p><p id="dda2bf67-ea9f-4d17-a3e8-3204aba564aa" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="e8d50be5-6579-4157-b0c3-d9eaf394fcdc" class="numbered-list" start="1"><li>Registrar, Modificar, Visualizar y Eliminar cursos [M/G]</li></ol><ol type="1" id="eb0fbb7b-a429-43c5-ad2c-77a5a3006992" class="numbered-list" start="2"><li>Marcar cursos como realizados [A]</li></ol><ol type="1" id="2d736edd-ee47-47a5-8468-3afdbf78f31e" class="numbered-list" start="3"><li>Visualizar métricas de cursos realizados [Todos]</li></ol><ol type="1" id="36497ca2-cc3d-4a33-a43b-2104bdc921b4" class="numbered-list" start="4"><li>Verificar el cumplimiento de los cursos por parte de los agentes [G]</li></ol></div></p><p id="3cc41afd-6070-4bb8-8fa0-a58520bdaa0c" class="">
+</p><p id="27ee4942-4aa9-445d-8801-4d5f67cc0aad" class=""><strong>NOTA:</strong> Se administrarán los cursos y grupo de cursos desde el panel de administrador del programa.</p><p id="bf748f9b-7b5d-4b74-8585-063afd6e1aca" class="">
+</p><ol type="1" id="bd98ce36-a8d0-4dc9-86e1-fb24d76cd2a3" class="numbered-list" start="2"><li><strong><em>VENTAS</em></strong></li></ol><p id="6a38e10d-c017-4e19-9e12-26fb3ba2af0e" class="">Gerentes conocen el acumulado de ventas general y particular de los agentes según su tipo de seguro y periodo. Agentes consultan y registran sus ventas.</p><p id="9a42dcdc-a77b-481d-8f86-ff0fec727307" class="">
+</p><p id="a1a6f8d7-0921-4cba-a87c-c4bce6736eaf" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="740b922e-4a47-4e2f-8af3-e85d3de9a169" class="numbered-list" start="1"><li>Registrar venta [A]</li></ol><ol type="1" id="45b13776-20c9-469f-b525-a38bfe6f4d04" class="numbered-list" start="2"><li>Visualizar métricas de acumulados de ventas [G/A]</li></ol><ol type="1" id="0bf48aeb-b6d7-44c4-a06d-9f2c061ef2d0" class="numbered-list" start="3"><li>Verificar la venta de un agente [G]</li></ol></div></p><p id="45a2f3f7-5087-4014-afae-f7f0f54a94bf" class="">
+</p><p id="9cee69ba-69eb-4c1b-86ab-b849d41c98c8" class=""><strong>NOTA:</strong> Se llevará un proceso de verificación para cada venta que registre un agente, un gerente es responsable de la aceptación del registro de venta.</p><p id="c871152a-1cac-4881-8606-bc367a4cd341" class="">
+</p><ol type="1" id="3325e625-dcfd-457b-8191-5fc2d1758e42" class="numbered-list" start="3"><li><strong><em>USUARIOS</em></strong></li></ol><p id="ebdd054c-ae99-47cf-b2da-24bd9644b123" class="">Se registran usuarios que pueden interactuar con el sistema.</p><p id="dde14e8d-d5dd-4b55-998d-d373f2413747" class="">
+</p><p id="e71686d4-20bf-4dcf-914a-7285fa80c6c5" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="f762e879-b3f6-4719-923f-d061597162a1" class="numbered-list" start="1"><li>Registrar usuario</li></ol></div></p><p id="a75f13d8-88ef-4e76-93e3-f4d591b7e7ca" class="">
+</p><p id="cac31388-1c39-43aa-baed-20801eb2b2d8" class=""><strong>NOTA 1: </strong>Con el control de acceso implementado, se elegirá un rol de usuario, del cual dependerá el acceso a diferentes métricas y funcionalidades.</p><p id="1bb3bac1-5482-4024-b1d8-8a4e510a8836" class=""><strong>NOTA 2:</strong> El proceso de registro de usuario esta por definir.
+</p><ol type="1" id="1cf727d5-4ead-4119-83b0-12463a3eb593" class="numbered-list" start="4"><li><strong><em>CONTROL DE ACCESO</em></strong></li></ol><p id="985b0a01-b3af-48df-a35b-5d0dbd59e1a0" class="">Se definen las funcionalidades a las cuales tiene acceso cada tipo de usuario.</p><p id="0f2bdb1a-25cf-4f24-abc0-82cc17818111" class="">
+</p><p id="f834ebea-c2ad-49ba-afcd-efc328696f94" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="a8cfba42-0915-428e-a58b-07c127c45081" class="numbered-list" start="1"><li>Segmentación de privilegios del sistema</li></ol></div></p><p id="9ee43f4e-e940-4456-98e8-9c693991c5f5" class="">
+</p><ol type="1" id="8786867a-1186-419c-a075-ecad6c8d0862" class="numbered-list" start="5"><li><strong><em>PROSPECTOS</em></strong></li></ol><p id="26f7e150-bccf-45b0-8aa2-99ff9736ab90" class="">Gerentes visualizan la lista y métricas de prospectos de venta de los agentes. Agentes registran nuevos prospectos y su avance en el proceso de venta con los mismos, así como también visualizan métricas de la misma lista.</p><p id="0a28539f-608c-4ede-83c4-a231eb55ca9a" class="">
+</p><p id="6c49ad31-c1dd-446f-86d2-e341d5decd57" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="ad849397-f23c-4f1e-8070-92eca7ce09bb" class="numbered-list" start="1"><li>Registrar y Actualizar prospecto [A]</li></ol><ol type="1" id="d13ec239-e5e6-41b8-80a3-a742606a8147" class="numbered-list" start="2"><li>Visualizar métricas numéricas y gráficas [G/A]</li></ol></div></p><p id="7b18d3d2-d122-4a2a-9ba7-ec96305752f6" class="">
+</p><ol type="1" id="65ae1d6a-5dc6-4c4f-83f2-1429e754b7bd" class="numbered-list" start="6"><li><strong><em>CALENDARIO </em></strong><em>[En investigación de viabilidad]</em></li></ol><p id="9e1f5fcf-7733-407e-8bf4-55d7c77fa280" class="">Conexión con calendario de cuenta Outlook para la gestión de eventos de la empresa y personales.</p><p id="585f8737-e556-4460-b368-d15115df2642" class="">
+</p><p id="bd21848b-b41f-4cfa-ae99-8fb4df78bdcf" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="4d768593-22e1-44ef-ae8c-17e2d22061ba" class="numbered-list" start="1"><li>Visualizar eventos [Todos]</li></ol><ol type="1" id="7b834529-5d5c-4702-9138-ee676b073ed0" class="numbered-list" start="2"><li>Crear, Modificar y Eliminar eventos [Todos]</li></ol></div></p><p id="1da14e83-4d7a-40e8-8a6a-858a42e23cdd" class="">
+</p><p id="d5dc98fe-312d-4a4e-85a8-c89989e5c002" class=""><strong>NOTA: </strong>Se está investigando la posibilidad de la integración de este módulo por el sistema de comunicación de la aplicación (API).</p><p id="e8338c6d-eff4-439e-b36a-05261ea53fdb" class="">
+</p><ol type="1" id="17abea43-6096-4e3a-98a3-8df0961b2306" class="numbered-list" start="7"><li><strong><em>MI PROGRESO</em></strong></li></ol><p id="6de44794-a4ea-43fb-8164-718f686a4c85" class="">Agentes definen metas personales y analizan su progreso en cursos y ventas. Gerentes visualizan el progreso de sus agentes en sus metas, cursos y ventas.</p><p id="e3f14e19-4e81-4635-9c57-ff7f907f632d" class="">
+</p><p id="1b979c48-977e-4f07-9313-c9af0118880e" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="5181d730-ddf7-4767-be83-c0364cd95240" class="numbered-list" start="1"><li>Definir una meta personal de capacitación o de ventas [A]</li></ol><ol type="1" id="7b0ec19a-22ed-4757-b9da-1e5c7f6a6cca" class="numbered-list" start="2"><li>Visualizar información de progreso hacia metas [G/A]</li></ol><ol type="1" id="bb0d354a-bcbe-4101-af0e-6fa9351dedbe" class="numbered-list" start="3"><li>Notificaciones de progreso hacia metas [A]</li></ol></div></p><p id="77651471-f282-4be2-b82d-c644a5a821ca" class="">
+</p><p id="afeed8a6-2354-464b-afda-c3d9d7900af0" class="">8. <strong><em>MANAGEMENT</em></strong></p><p id="8c9c80c1-a668-4596-97e9-1ad4d22df341" class="">Panel administrativo para modificar información y restricciones del sistema, asegurando  escalabilidad y autogestión del proyecto por parte de RAM.</p><p id="3bdc6308-7e31-48de-b5b1-ebb2442afadc" class="">
+</p><p id="464e13a4-6d77-4552-b642-c64455c55100" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="680de4d0-5934-407d-ac53-7e923a511617" class="numbered-list" start="1"><li>Crear y Eliminar:<ul id="d1196302-e5fd-4b4a-b2ab-ed30e6a20ec7" class="bulleted-list"><li style="list-style-type:disc">Procedencia de agente (Referido, LinkedIn, etc.)</li></ul><ul id="908e5274-8dac-4e02-8114-c07bbf422ffe" class="bulleted-list"><li style="list-style-type:disc">Tipos de Seguros</li></ul><ul id="85db9dda-85ad-4f3d-93c7-b11eb66dc772" class="bulleted-list"><li style="list-style-type:disc">Cursos y Grupo de cursos</li></ul><ul id="8cd84fda-da37-4729-9dc4-98ce93b0f595" class="bulleted-list"><li style="list-style-type:disc">Metas departamentales y personales</li></ul><ul id="ce99b7b9-887b-4591-81dc-7bb966cfeb02" class="bulleted-list"><li style="list-style-type:disc">Tipos de usuario (Roles)</li></ul><ul id="e0641417-9445-4094-8762-2d43d7227e85" class="bulleted-list"><li style="list-style-type:disc">Etc.</li></ul></li></ol><ol type="1" id="0f63480e-0ebb-44f1-9c88-6bf5924e8b61" class="numbered-list" start="2"><li>Asignar privilegios de sistema a rol</li></ol></div></p><p id="137cc17d-bf70-4826-9bd7-12841cecc0db" class="">
+</p><p id="5dd3b9a5-532d-40c4-9982-8d56c271ff3c" class=""><strong>NOTA: </strong>El contenido de este módulo está sujeto a cambios según las necesidades del sistema y del equipo tanto de desarrollo como de Asesores RAM</p><p id="eb548744-8bf0-4f0e-8dbb-60b03495762c" class="">
+</p><ol type="1" id="67e5e42b-3cc3-45c0-8207-7fc4596d8a65" class="numbered-list" start="9"><li><strong>AYUDA</strong></li></ol><p id="f642d662-f795-4d68-81b9-79e6b884158a" class="">Los agentes, gerentes y administradores acceden a la sección de preguntas frecuentes, ayuda y videotutoriales en caso de tener una duda.</p><p id="09a570b9-2b8f-4e17-a359-e4a7d269064b" class="">
+</p><p id="ad3e037f-eec4-47cb-8d11-e12ddc1e20b5" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="24f827df-87a7-4d25-bf24-2b4a794cf74f" class="numbered-list" start="1"><li>Preguntas frecuentes</li></ol><ol type="1" id="22c3a0ca-4901-47dd-a567-d76107c89b31" class="numbered-list" start="2"><li>Videotutoriales</li></ol><ol type="1" id="894c1211-f67b-488f-aa44-b4a5941bdc3c" class="numbered-list" start="3"><li>Contactos</li></ol></div></p><p id="72236866-1c6c-48f7-a798-6aff806c833e" class="">
+</p><p id="cac7592a-72f2-43bb-942e-34937553be91" class=""><strong>DEFINICIÓN DE MVP Y ENTREGAS</strong></p><figure id="52f03501-c53c-42bc-a1a8-47d199e1b43b" class="image"><a href="../../Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Definicio%CC%81n%20de%20Alcance%20ca920809c33b4daeb7cecc1d35bc67c6/Manejo%20de%20Versiones%2035db8bf8116049bbb9b82ffb03ac5823/0%201%200%20d612a844ed204ac680432c99a169d777/image1.png"><img style="width:700px" src="../../Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Definicio%CC%81n%20de%20Alcance%20ca920809c33b4daeb7cecc1d35bc67c6/Manejo%20de%20Versiones%2035db8bf8116049bbb9b82ffb03ac5823/0%201%200%20d612a844ed204ac680432c99a169d777/image1.png"/></a></figure><p id="3f6b7945-8669-4a29-b78b-f25245ba6256" class=""><strong>MVP</strong></p><p id="5541ee0c-7767-4cad-a230-597c8c09ce2a" class="">El Producto Mínimo Viable o Minimum Viable Product (MVP) es el conjunto mínimo de funcionalidades del producto que aporten valor al cliente y recibir retroalimentación de las mismas.</p><p id="ae8a11e1-a0f5-4f73-84b0-98e233b7dacb" class="">La propuesta de MVP consiste en la primera implementación de los primeros tres módulos (Cursos, Ventas y Usuarios), de los cuáles se desarrollarán las funcionalidades necesarias para poder marcar un curso como realizado, registrar una nueva venta y atribuirla a un usuario, ver métricas sobre el progreso general y particular de los agentes sobre cursos completados y ventas. Dichas funcionalidades se desarrollarán como primer avance y están sujetas a evolución.</p><p id="465b6cb8-a44f-427b-878d-998d7e164ccb" class=""><strong>MLP</strong></p><p id="8f703f67-74a2-4ff2-9a0a-248c921ac569" class="">El Producto Mínimo Adorado o Minimum Lovable Product (MLP), es el conjunto mínimo de funcionalidades para que el usuario adore el producto desde el principio.</p><p id="d85ea834-ac96-4c9a-9eae-a632438f6825" class="">Nuestra propuesta MLP es la evolución de las primeras funcionalidades e implementación de los siguientes tres módulos (Control de Acceso, Calendario y Prospectos). Las funcionalidades adicionales al MVP que éste tendría son:</p><ul id="93db0977-4568-45d6-aba9-962ad0a47916" class="bulleted-list"><li style="list-style-type:disc">Tener roles de usuario, limitando funcionalidades del sistema según su nivel de acceso como son métricas generales, etc.</li></ul><ul id="aae4f1af-3a3a-4909-b22e-66191dc481f5" class="bulleted-list"><li style="list-style-type:disc">Crear un acceso al calendario de Outlook para visualizar, crear y editar eventos</li></ul><ul id="d1908006-3811-444f-9528-fa7f103c3192" class="bulleted-list"><li style="list-style-type:disc">Generar una lista de prospectos de clientes para los agentes</li></ul><ul id="3fb1b95e-aec2-4912-a95f-f23654a5e42e" class="bulleted-list"><li style="list-style-type:disc">Métricas sobre lista de prospectos (Personales y generales según políticas de acceso)</li></ul><ul id="c8a4c44d-80b6-48cd-857e-008d16383b35" class="bulleted-list"><li style="list-style-type:disc">Métricas con información adicional sobre cursos y ventas</li></ul><p id="a3e035a9-1a6c-4054-b1b3-47624711d5f0" class="">
+</p><p id="ca26e8b8-b2d0-458f-b0db-2255189dd612" class="">
+</p></div></article></body></html>

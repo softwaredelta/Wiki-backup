@@ -1,0 +1,697 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>NestJS</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c3ad3089-1c85-49da-8ebf-eadb9e0574f1" class="page sans"><header><img class="page-cover-image" src="data:image/png;base64,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" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://static-00.iconduck.com/assets.00/nestjs-icon-512x510-fo1q60vg.png"/></div><h1 class="page-title">NestJS</h1><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td><span class="selected-value select-value-color-blue">Technology</span><span class="selected-value select-value-color-red">Todo</span></td></tr><tr class="property-row property-row-created_by"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedBy"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 10.4229C6.05176 10.4229 4.54785 11.1133 3.83008 11.9131C2.90039 10.9082 2.33301 9.55469 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 9.55469 13.1064 10.9082 12.1699 11.9131C11.4521 11.1133 9.94824 10.4229 8 10.4229ZM8 9.30176C9.32617 9.30859 10.3516 8.18066 10.3516 6.71094C10.3516 5.33008 9.31934 4.18164 8 4.18164C6.6875 4.18164 5.6416 5.33008 5.64844 6.71094C5.65527 8.18066 6.68066 9.28809 8 9.30176Z"></path></svg></span>Created by</th><td><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kenny Eduard Vercaemer González</span></td></tr><tr class="property-row property-row-last_edited_by"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesCreatedBy"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 10.4229C6.05176 10.4229 4.54785 11.1133 3.83008 11.9131C2.90039 10.9082 2.33301 9.55469 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 9.55469 13.1064 10.9082 12.1699 11.9131C11.4521 11.1133 9.94824 10.4229 8 10.4229ZM8 9.30176C9.32617 9.30859 10.3516 8.18066 10.3516 6.71094C10.3516 5.33008 9.31934 4.18164 8 4.18164C6.6875 4.18164 5.6416 5.33008 5.64844 6.71094C5.65527 8.18066 6.68066 9.28809 8 9.30176Z"></path></svg></span>Last edited by</th><td><span class="user"><img src="../Gestio%CC%81n%20de%20Departamento%20ba9ebbcf868c4949accd39876faec9e8/Escritorio%2048dc738f81a343219aa00799b025a0f9/Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Objetivos%20Semanales%20271d88f9138e4f94ac354d273e2ebad9/yo.jpeg" class="icon user-icon"/>Alejandro Mtz. Luna</span></td></tr><tr class="property-row property-row-url"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>URL</th><td><a href="https://docs.nestjs.com/" class="url-value">https://docs.nestjs.com/</a></td></tr></tbody></table></header><div class="page-body"><h1 id="58f0309a-9f83-4bd4-bc10-0889275460fe" class=""><mark class="highlight-red">¿Qué es NestJs?</mark></h1><p id="11166c43-b8bb-4512-8abc-96aca3e0ccbe" class="">NestJS es un marco de trabajo para <mark class="highlight-teal">Node.js</mark> que utiliza <mark class="highlight-blue">TypeScript </mark>y se basa en el patrón de arquitectura de servidor Modelo-Vista-Controlador (MVC) y el patrón de inyección de dependencias (IoC). Esto lo hace altamente escalable y fácil de mantener.</p><div id="ea45396e-0d80-48b5-970b-7e221103bd7b" class="column-list"><div id="ffaf7385-a73c-4557-85fe-0de5054cd1b4" style="width:50%" class="column"><h2 id="19c428ce-2a4d-406a-b9d4-552b5e6dc792" class=""><details open=""><summary>Pros</summary></details></h2><div class="indented"><h3 id="459cadfd-634d-49f8-ac65-6b6d04d6480f" class=""><mark class="highlight-teal"><strong>1. Modularidad</strong></mark></h3><p id="3e43e43e-0354-472b-902e-a8b30bf1698f" class="">NestJS se basa en módulos, lo que facilita la creación de aplicaciones escalables y fáciles de mantener. Los módulos permiten una mejor organización del código y una fácil separación de la lógica de negocio.</p><h3 id="cf730dae-fe80-452a-bde6-8a3eaacb6738" class=""><mark class="highlight-teal"><strong>2. Patrones de diseño</strong></mark></h3><p id="adeac0e0-174e-49c7-8545-cd23b4bdec1d" class="">NestJS utiliza patrones de diseño como el patrón de inyección de dependencias (IoC) y el patrón Modelo-Vista-Controlador (MVC), lo que hace que la aplicación sea más fácil de entender, mantener y escalar.</p><h3 id="84e82717-127a-4867-90f0-6a60928d8f46" class=""><mark class="highlight-teal"><strong>3. Soporte para TypeScript</strong></mark></h3><p id="f87cf6f7-f186-427a-bbfd-02ce2d0d850f" class="">NestJS está construido sobre TypeScript, lo que proporciona una mejor legibilidad y facilidad de mantenimiento del código. TypeScript también proporciona una mayor seguridad al permitir la detección temprana de errores en tiempo de compilación.</p><h3 id="e7a0d4e3-ac2a-405d-8fc3-4d4cea0fbd2f" class=""><mark class="highlight-teal"><strong>4. Amplia comunidad de desarrolladores</strong></mark></h3><p id="175959e0-eb23-47ab-9c49-40b20891fb9c" class="">NestJS tiene una gran comunidad de desarrolladores y contribuidores que proporcionan soporte, documentación y herramientas adicionales. También hay una gran cantidad de bibliotecas de terceros disponibles para su uso con NestJS.</p><h3 id="009e0ef3-7740-4c02-8ccf-ad410eede900" class=""><mark class="highlight-teal"><strong>5. Integración con otros marcos de trabajo</strong></mark></h3><p id="857d0753-4109-4f2a-b9ac-97a2dfe54026" class="">NestJS se integra fácilmente con otros marcos de trabajo y bibliotecas de JavaScript, como Express y Fastify, lo que permite una mayor flexibilidad y personalización en el desarrollo de aplicaciones.</p><p id="ad019ed4-c00f-4532-bce7-14b13a70d6b8" class="">
+</p></div></div><div id="de9d8dc9-9919-4bfc-884f-ea322fad4c70" style="width:50%" class="column"><h2 id="180c1d7d-2537-40d4-9781-69e51099e1d0" class=""><details open=""><summary>Contras</summary></details></h2><div class="indented"><h3 id="f1195136-f1a0-40bc-9725-b24c6fff48aa" class=""><mark class="highlight-orange"><strong>1. Curva de aprendizaje</strong></mark></h3><p id="31b88ccc-3095-4a97-b892-1e2e3c736a6c" class="">NestJS puede tener una curva de aprendizaje pronunciada para aquellos que no están familiarizados con TypeScript, patrones de diseño y la estructura de módulos. Sin embargo, esto puede ser superado con la práctica y la experiencia.</p><h3 id="3f388fa7-a98c-489f-a00b-032fafa0296c" class=""><mark class="highlight-orange"><strong>2. Sobrecarga</strong></mark></h3><p id="d7512912-57a1-487d-b909-aee1ea95954c" class="">NestJS puede tener una sobrecarga en la creación de aplicaciones más simples, ya que está diseñado para manejar aplicaciones más grandes y complejas. Esto puede hacer que la creación de aplicaciones más simples sea menos eficiente.</p><h3 id="7f23c7c1-7f01-4d55-b0df-70fbf4d77558" class=""><mark class="highlight-orange"><strong>3. Dependencia de Node.js</strong></mark></h3><p id="43c5874c-daaa-443b-b78c-1d1ded515bd9" class="">NestJS es dependiente de Node.js, lo que puede ser un obstáculo para aquellos que prefieren utilizar otros lenguajes de programación o marcos de trabajo.</p><h3 id="f6736cab-f348-4cda-bc70-a4b3cb92ece0" class=""><mark class="highlight-orange"><strong>4. Tamaño de la aplicación</strong></mark></h3><p id="f4cd063f-269c-4348-9eca-2ac87830478c" class="">NestJS puede hacer que el tamaño de la aplicación sea más grande debido a la necesidad de incluir las bibliotecas y dependencias adicionales. Sin embargo, esto puede ser mitigado mediante el uso de herramientas de empaquetamiento y optimización de código.</p><p id="1d11bf50-c026-4162-bec9-77753dd8ec70" class="">En resumen, NestJS ofrece muchos beneficios, como modularidad, patrones de diseño, soporte para TypeScript, una gran comunidad de desarrolladores y flexibilidad para integrarse con otros marcos de trabajo. Sin embargo, también tiene algunas desventajas, como una curva de aprendizaje pronunciada, sobrecarga para aplicaciones más simples, dependencia de Node.js y un posible aumento en el tamaño de la aplicación.</p></div></div></div><h1 id="ee7a751a-b4bd-4091-9ff5-d56680b47274" class=""><details open=""><summary><strong>Instalación</strong></summary></details></h1><div class="indented"><p id="ac3ca052-41b8-4920-b318-58a16634b4c5" class="">Para instalar NestJS, puedes utilizar el comando de Node Package Manager (npm):</p><p id="ccf3f439-94e4-4c3c-a9a0-39a2b3fa9e8d" class=""><code>npm i -g @nestjs/cli</code></p></div><h1 id="2b120e6f-e34e-4c15-964d-8bde5f2162d8" class=""><details open=""><summary><strong>Crear un nuevo proyecto</strong></summary></details></h1><div class="indented"><p id="5bfcee49-b2da-417f-ae65-b0dacc6313cc" class="">Puedes crear un nuevo proyecto utilizando el comando </p><p id="7a06502f-6aa8-40ce-9351-a907e9c64454" class=""><mark class="highlight-brown"><code><strong>nest new &lt;nombre del proyecto&gt;</strong></code></mark></p><p id="27ab59f9-11bd-430d-a9de-3c3d59b7450e" class="">Por ejemplo:</p><p id="51ecee2f-7f3d-42d9-96df-6a210b10cb26" class=""><code>nest new mi-proyecto</code></p><p id="010a6496-be6c-46e8-8786-586aa80265a9" class="">Esto creará un nuevo proyecto de NestJS con una estructura básica de archivos y carpetas.</p></div><h1 id="834f7b95-1602-42ba-92b1-796d357119a8" class=""><details open=""><summary><strong>Crear un controlador</strong></summary></details></h1><div class="indented"><p id="c3d7668d-1cd4-4bb0-a2c0-7c1d82695bf6" class="">Los controladores son responsables de manejar las solicitudes HTTP entrantes. Puedes crear un controlador utilizando el comando</p><p id="0959bf84-1a37-4026-b5cf-b2f3762bf8d4" class=""> <code><strong>nest generate controller &lt;nombre del controlador&gt;</strong></code></p><p id="8a5c6293-7cc7-4a81-8db9-f0d5a5d7a040" class="">Por ejemplo:</p><pre id="50ff89df-2b1c-4414-aaf0-a25776b01802" class="code"><code>nest generate controller miControlador</code></pre><p id="d027bc8d-220b-4e61-8ff7-6fae897540ba" class="">Esto creará un archivo <mark class="highlight-blue"><code><strong>miControlador.controller.ts</strong></code></mark> en la carpeta <mark class="highlight-teal"><code><strong>src</strong></code></mark> con un controlador básico.</p></div><h1 id="0a0214e8-6ecc-4ab9-8311-49bb367ab07f" class=""><details open=""><summary><strong>Crear un servicio</strong></summary></details></h1><div class="indented"><p id="d166ff1d-1110-4db0-a41d-e3a490ac7a67" class="">Los servicios son responsables de manejar la lógica de negocio de la aplicación. Puedes crear un servicio utilizando el comando <code><strong>nest generate service &lt;nombre del servicio&gt;</strong></code>. Por ejemplo:</p><pre id="c737f82b-9226-4a39-a676-2f96632dc4da" class="code"><code>nest generate service miServicio</code></pre><p id="d674ed96-ea3c-4c61-818c-e987aaaa8331" class="">Esto creará un archivo <code><mark class="highlight-blue"><strong>miServicio.service.ts</strong></mark></code><mark class="highlight-blue"><strong> </strong></mark>en la carpeta <mark class="highlight-teal"><code><strong>src</strong></code></mark>con un servicio básico.</p></div><h1 id="a0836b6e-ed01-49c9-88f1-0978a30009eb" class=""><details open=""><summary><strong>Inyectar dependencias</strong></summary></details></h1><div class="indented"><p id="1477f243-acc6-43c8-bf30-4cc491c3caea" class="">NestJS utiliza el patrón de inyección de dependencias para manejar las dependencias entre los diferentes componentes de la aplicación.</p><p id="076d0285-aec2-4a87-b226-b4b4a7d5f7fd" class="">Puedes inyectar dependencias en un controlador o servicio utilizando el decorador <code><strong>@Injectable()</strong></code> y el decorador <code><strong>@Inject()</strong></code>. Por ejemplo:</p><pre id="3d58f53f-9d2f-41d4-a8af-768a98888041" class="code"><code>import { Injectable, Inject } from &#x27;@nestjs/common&#x27;;
+import { MiServicio } from &#x27;./miServicio.service&#x27;;
+
+@Injectable()
+export class MiControlador {
+  constructor(@Inject(&#x27;MiServicio&#x27;) private readonly miServicio: MiServicio) {}
+
+  // ...
+}</code></pre><p id="db4550a9-f23b-4745-b05c-151a176e9ecb" class="">Aquí, estamos inyectando el servicio <mark class="highlight-yellow"><code><strong>MiServicio</strong></code></mark><mark class="highlight-yellow"><strong> </strong></mark>en el controlador <mark class="highlight-yellow"><code><strong>MiControlador</strong></code></mark>.</p><p id="ff99f902-bc02-43c7-bab2-0d2e6cc53755" class="">
+</p></div><h1 id="ae2b828d-6337-411d-868a-38fbd8575117" class=""><details open=""><summary>Configuración</summary></details></h1><div class="indented"><p id="4ef75a74-e0b3-4aa2-93bb-c0a1d37acb41" class="">Puedes configurar tu aplicación utilizando el archivo <code><strong>app.module.ts</strong></code><strong>.</strong></p><p id="aa5f25bf-fb11-40dc-ae58-75d0cdb284ba" class="">Aquí es donde importas todos los módulos necesarios y los agregas a la lista de proveedores. Por ejemplo:</p><pre id="02315fa5-4cb8-4efc-b983-2946a00d2b22" class="code"><code>import { Module } from &#x27;@nestjs/common&#x27;;
+import { MiControlador } from &#x27;./miControlador.controller&#x27;;
+import { MiServicio } from &#x27;./miServicio.service&#x27;;
+
+@Module({
+  controllers: [MiControlador],
+  providers: [
+    {
+      provide: &#x27;MiServicio&#x27;,
+      useClass: MiServicio,
+    },
+  ],
+})
+export class AppModule {}</code></pre><p id="6565f281-ef14-4e84-9277-e633ef28d83a" class="">Aquí, estamos importando el controlador <mark class="highlight-yellow"><code><strong>MiControlador</strong></code></mark><mark class="highlight-yellow"> </mark>y el servicio <code><strong>MiServicio</strong></code>. También estamos agregando el servicio a la lista de proveedores, utilizando el nombre <code><strong>MiServicio</strong></code>.</p></div><h1 id="99c9157e-38f9-4059-bde9-c981d3b7f8fb" class=""><details open=""><summary><strong>Ejecutar la aplicación</strong></summary></details></h1><div class="indented"><p id="c0c07531-4802-4220-a17c-a53f84c80c62" class="">Para ejecutar la aplicación, puedes utilizar el comando <code><strong>npm run start</strong></code>. Esto iniciará el servidor en el puerto por defecto (3000).</p></div><h1 id="10b40f4d-cdc4-4407-a03b-684c0219b97f" class=""><details open=""><summary>Recomendaciones para el uso de NestJs</summary></details></h1><div class="indented"><h2 id="3a1ce87e-8cb3-45c9-a70a-2a636eab2467" class=""><strong>1. NestJS Snippets</strong></h2><p id="29be00ee-f3f2-43ef-af87-fb4b2819f765" class="">Esta extensión proporciona una gran cantidad de snippets útiles para escribir código de NestJS. Simplifica la escritura de código al proporcionar atajos de teclado para bloques de código comunes, como controladores, servicios, módulos y más.</p><p id="035af08f-2ddb-4523-8237-db152da857bd" class="">
+</p><h2 id="af6cd928-1238-4904-ab4e-437444abeb9a" class=""><strong>2. NestJS Explorer</strong></h2><p id="bc0f9c02-3234-4aee-9dcd-3ae88c26d1f8" class="">Esta extensión agrega una vista de árbol a Visual Studio Code que muestra la estructura de su proyecto NestJS, lo que facilita la navegación por los diferentes archivos y carpetas de su aplicación.</p><p id="2b011cdc-455e-4cd4-a67e-78c87aad6730" class="">
+</p><p id="bdf4f17d-c9af-4fba-bbe2-95ff7f5936f8" class="">
+</p><p id="54207d10-a40b-475c-8189-c0a99aa080a7" class="">
+</p></div><hr id="a33d52a8-66cd-4b95-ab58-b1cdc645e279"/><h1 id="150d3409-efeb-4af1-9cfd-5784a9d44dac" class=""><mark class="highlight-yellow">Documentación y recursos </mark></h1><div id="001193dd-34cd-464f-b118-28149f68ea7e" class="column-list"><div id="6268ddd3-4e06-4904-9734-d9bd3d25830b" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="f131528b-02fd-4d4e-b45c-fde89dd170db"><div style="font-size:1.5em"><span class="icon">📆</span></div><div style="width:100%">Documentación Oficial NestJS</div></figure><figure id="462c7251-7fb8-4390-a348-27cff1263a12"><a href="https://docs.nestjs.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Documentation | NestJS - A progressive Node.js framework</div><div class="bookmark-description">Nest is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with TypeScript and combines elements of OOP (Object Oriented Progamming), FP (Functional Programming), and FRP (Functional Reactive Programming).</div></div><div class="bookmark-href"><img src="https://docs.nestjs.com/apple-touch-icon-precomposed.png" class="icon bookmark-icon"/>https://docs.nestjs.com/</div></div><img src="http://nestjs.com/img/nest-og.png" class="bookmark-image"/></a></figure></div><div id="01c74c51-9698-4638-834e-458d31265ff1" style="width:50%" class="column"><p id="59e38a76-d7df-4bb5-b3a5-252d56500215" class="">
+</p></div></div></div></article></body></html>

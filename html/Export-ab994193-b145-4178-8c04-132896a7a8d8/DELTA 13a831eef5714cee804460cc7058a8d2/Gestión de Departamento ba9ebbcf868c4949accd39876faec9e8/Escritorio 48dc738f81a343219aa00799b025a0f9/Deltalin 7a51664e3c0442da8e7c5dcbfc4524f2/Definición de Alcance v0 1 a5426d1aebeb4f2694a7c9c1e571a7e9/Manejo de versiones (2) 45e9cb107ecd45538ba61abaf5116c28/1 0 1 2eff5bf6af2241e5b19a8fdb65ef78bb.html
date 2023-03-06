@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1.0.1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2eff5bf6-af22-41e5-b19a-8fdb65ef78bb" class="page sans"><header><h1 class="page-title">1.0.1</h1><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Autor</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/AATXAJyVvA5w4M3bEpGilef5RaFjnN1NmXYgaMl2Xca_=s100" class="icon user-icon"/>Emiliano Vásquez Olea</span><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">A</span></span>Andres</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Descripción</th><td>Pequeños cambios de redacción a módulos de sistema. Se agrego una seguna accion especifica al modulo de reportes (movil).</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Fecha</th><td><time>@March 2, 2023</time></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Revisado</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Reviewed</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Revisado por</th><td><span class="user">@Cristian Rico</span> </td></tr></tbody></table></header><div class="page-body"><p id="83a69cbf-3a0d-4cf6-baa3-476e9f23d62a" class=""><strong>ESPECIFICACIÓN DE MÓDULOS DE SOFTWARE</strong></p><p id="63ffabb5-95b4-4df7-805d-f7771b2e88e3" class=""><strong>APLICACIÓN MÓVIL DE AUDITORIAS Y APLICACIÓN WEB ADMINISTRATIVA PARA EMPRESA </strong><em><strong>Michelin</strong></em></p><figure id="43da1a25-ce64-4eca-977f-6ae36061064f" class="image"><a href="../../../Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Definicio%CC%81n%20de%20Alcance%20ca920809c33b4daeb7cecc1d35bc67c6/image2.png"><img style="width:500px" src="../../../Productos%20de%20Trabajo%2097cd5526070c4c4aaa931c06e02b08d9/Definicio%CC%81n%20de%20Alcance%20ca920809c33b4daeb7cecc1d35bc67c6/image2.png"/></a></figure><p id="7ea94738-ab43-480f-a2f4-853f478d3b37" class="">21/02/2023</p><p id="e0aed2de-601f-4ac0-ac5a-e2de5cf29939" class="">
+</p><h2 id="c8c2dc9d-0335-4d72-a4ff-4dcf13290127" class="">Simbología</h2><h3 id="2b8cee2a-867b-4efe-9f8d-0a0f82d954e1" class="">Tipos de usuarios (Roles)</h3><p id="d5a783bf-dbb1-4818-beb7-fbca23d37edf" class="">[A] - Administrador</p><p id="bbeed880-4b40-4c09-aec7-3bfe091254fe" class="">[M] - Mánager</p><p id="75301c47-ebdd-4b2e-aaff-07cfd54e44f8" class="">[T] - Territory Business Manager (TBM)</p><h2 id="de45412b-77ae-4604-aac3-6501ea636bf6" class=""><strong>Módulos (PRIORIZADOS)</strong></h2><h3 id="6e2fd84e-0124-41a5-8e65-06a272363587" class="">Módulos de Aplicación</h3><ol type="1" id="b00b9fa0-6b69-4b98-814d-e51467ca1cde" class="numbered-list" start="1"><li><strong><em>RECORRIDO</em></strong></li></ol><p id="dde5f04f-5324-40d3-b89a-8b198619e449" class="">Módulo centrado en el desarrollo del ambiente de Unity, donde se manejará el progreso de la auditoria e integración con el módulo de formulario. </p><p id="21de6a23-712d-4b8d-8aec-388e1bd40f9f" class="">
+</p><p id="e071da86-57c3-4428-93a6-c2711ebcf7b7" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="fe06b3c2-b669-46aa-96ae-53cc5168b769" class="numbered-list" start="1"><li>Selección de Punto de Venta.</li></ol><ol type="1" id="372b5864-4b64-4449-b033-37acaaecf591" class="numbered-list" start="2"><li>Interacción con el exterior e interior.</li></ol><ol type="1" id="b538049f-00b1-4cb2-b8c4-a8630594e2f4" class="numbered-list" start="3"><li>Resumen final de la auditoría.</li></ol><ol type="1" id="917effe8-4368-471d-8041-ebd8f177c0a4" class="numbered-list" start="4"><li>Manejar el progreso del proceso (Check-points).</li></ol></div></p><p id="06e5d31f-65c1-4ef2-9c22-e3dd8daabe99" class="">
+</p><p id="8635384e-385d-47b1-9d42-23473f1709bb" class=""><strong>NOTA:</strong></p><p id="905f38c2-e950-4e64-9e74-31635cb08649" class="">Este módulo tendrá integración con el módulo de formulario. </p><p id="bfbef4e7-04d2-43b1-af76-c7dff63764f2" class="">
+</p><ol type="1" id="bfec547e-28e3-4f90-b63e-2a5cad369b59" class="numbered-list" start="2"><li><strong><em>Formulario</em></strong></li></ol><p id="e39d73ef-1d9b-4b42-bd18-6ecf2f8f142b" class="">Módulo que engloba las secciones de preparación, entrevista con el cliente y entrevista con el mánager del punto de venta.</p><p id="ac3a5251-96f0-4453-bb92-e4129d8a8e27" class="">
+</p><p id="20c641fd-976f-42ce-a755-37f256bcf0b7" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="fd3f69e3-d5fe-4db6-90d2-e1ae3c577a2e" class="numbered-list" start="1"><li>Responder Preguntas.</li></ol><ol type="1" id="eaadc8d7-c692-4ff0-a419-7c997e19a2db" class="numbered-list" start="2"><li>Interacción de Cámara.</li></ol><ol type="1" id="357585d2-b733-4cd5-b581-0dfb3882c241" class="numbered-list" start="3"><li>Tipo de Punto de Venta.</li></ol></div></p><p id="1eb9300a-aa34-4fa5-8778-2ef255733678" class="">
+</p><ol type="1" id="8e4f530c-76be-4dde-b46c-8241debca7dc" class="numbered-list" start="3"><li><em><strong>Reporte</strong></em></li></ol><p id="28792bae-7481-4f7c-8972-cdc5273737a9" class="">Manejo de la información del formulario y recorrido para la generación del reporte en formato PDF.</p><p id="1d674882-3598-466c-8dfe-4faa2efb5e79" class="">
+</p><p id="35cb1046-7d92-47a1-bf74-9a6f7f1e9ec9" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="a62b6489-04c0-4454-ac8c-c0e528952a46" class="numbered-list" start="1"><li>Diseño y generación del Reporte.</li></ol><ol type="1" id="df3561d4-8a3f-48fa-acfd-e69ed5501fb8" class="numbered-list" start="2"><li>Guardar el reporte en la base de datos.</li></ol></div></p><p id="97b55dc0-56c8-481e-8be5-24d8e68c9c33" class="">
+</p><ol type="1" id="942fdcf0-f969-4604-a96f-2f78a61766c2" class="numbered-list" start="4"><li><em><strong>Correo</strong></em></li></ol><p id="31260675-d65d-4470-b6e8-3e5f63aa6de3" class="">Módulo enfocado en el desarrollo del componente de la API usado para el envío de los reportes por correo.</p><p id="896cd4ab-e761-48f4-9481-c395762059dd" class="">
+</p><p id="c881ae0c-5fcc-45f5-9696-744d272f22a5" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="9e78ef53-7dc0-4cfd-b0a9-1d7f6ee39765" class="numbered-list" start="1"><li>Escribir los correos de los interesados.</li></ol><ol type="1" id="b54e7375-16d9-4424-9f82-830a82b395ec" class="numbered-list" start="2"><li>Automatizar el envío de correo.</li></ol></div></p><p id="ba069c58-d408-4778-ab46-18871eca6375" class="">
+</p><ol type="1" id="50011beb-e064-476f-a35a-930642ef2003" class="numbered-list" start="5"><li><em><strong>Autenticación</strong></em></li></ol><p id="3ee85279-217e-4972-992b-331456f27617" class="">Módulo para manejar el acceso a la aplicación a través de la verificación de credenciales.</p><p id="7f899e98-0ef9-436e-b6c4-4c6f33855db4" class="">
+</p><p id="4cfe9b1d-d905-43d4-adf5-c385164d9c4a" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="462a6ae4-5c3c-40cd-b9d3-19dbed91bb73" class="numbered-list" start="1"><li>Inicio de sesión.</li></ol></div></p><p id="419cc9a0-de0e-429f-a1f3-d04d01474cca" class="">
+</p><h3 id="c7187277-5936-40eb-924f-c29af243c4ac" class="">Módulos Web</h3><ol type="1" id="7fd452ef-ca63-4b9b-97f8-c76b12066e57" class="numbered-list" start="1"><li><em><strong>Administración Usuarios</strong></em></li></ol><p id="0d2e0649-bda4-44df-b037-281dbc3ff1a2" class="">Módulo para la administración de los miembros de Michelín con acceso al sistema, tanto roles y los equipos.</p><p id="301edcee-5abf-435c-867a-553feaf4ddc5" class="">
+</p><p id="85bc0155-e9ab-4150-b550-5e5901c9ddbe" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="937fe398-8cc9-4520-8f5e-f7adb8e3316e" class="numbered-list" start="1"><li>Crear, Modificar y Eliminar Usuarios.</li></ol><ol type="1" id="c01863d2-adfd-4a35-9f83-ca05315af070" class="numbered-list" start="2"><li>Crear, Modificar y Eliminar Equipos.</li></ol></div></p><p id="91dd5f6d-e73b-4e01-9794-410873482bb9" class="">
+</p><ol type="1" id="284744e5-cd28-4779-90b9-2d2b1673ce34" class="numbered-list" start="2"><li><em><strong>Administración Puntos de Venta</strong></em></li></ol><p id="7bb4d1f3-84b5-4e5f-b06d-aeafb47c5e66" class="">Módulo de Puntos de venta que trabaja la empresa Michelin</p><p id="ae65af6a-1492-4430-bd4a-324aaa456027" class="">
+</p><p id="1bddacfd-bb0f-4109-ba87-7610d753a417" class="">Acciones específicas del módulo incluyen:<div class="indented"><ol type="1" id="798c0ef3-28ed-4cc5-8941-b01066d16593" class="numbered-list" start="1"><li>Crear, Modificar y Eliminar Puntos de Venta.</li></ol><ol type="1" id="74f81943-5461-4b63-8c89-039e0f373d2f" class="numbered-list" start="2"><li>Recuperar información de API Google.</li></ol></div></p><p id="2c9c3dbb-d92e-4639-a319-b4151b8f4f89" class="">
+</p><ol type="1" id="f49a871b-afb1-4830-8b12-bfdac708c4ff" class="numbered-list" start="3"><li><em><strong>Historial</strong></em></li></ol><p id="8d3daa29-fafe-4b34-b70b-f1f0436a0308" class="">Módulo del registro de todos los reportes pasados.</p><p id="4dc8dcbe-cc49-4b0c-a703-32418c0a9fec" class="">
+</p><p id="d646aa23-23ba-456b-aca5-07d1e1eb5ce6" class="">Acciones especificas del módulo incluyen:<div class="indented"><ol type="1" id="d905c3bb-4d93-4c6c-ae00-b27a0e57e83e" class="numbered-list" start="1"><li>Filtrar los reportes.</li></ol><ol type="1" id="91229b11-2b02-4ca1-8320-62326f0f84be" class="numbered-list" start="2"><li>Reenviar correos.</li></ol><ol type="1" id="503593e1-80d0-477a-af95-80a26a999e4c" class="numbered-list" start="3"><li>Visualizar resúmenes y reportes.</li></ol></div></p><p id="d680d539-3b5b-41af-9aa7-8e30579ba6b8" class="">
+</p><ol type="1" id="7f97084c-cbce-4b1f-b1c8-d07f00fd6aa6" class="numbered-list" start="4"><li><em><strong>Preguntas</strong></em></li></ol><p id="909e9456-42c0-455f-8341-9f04963a42e1" class="">Módulo de las preguntas realizadas durante las auditorias</p><p id="63597f0a-f0e2-4cb9-ac8a-264917e5b0af" class=""><div class="indented"><p id="67ad32fc-ddad-4028-9494-54abc853f213" class="">Acciones especificas del modulo incluyen:</p><ol type="1" id="7b8fc04e-3a75-4528-9023-6090fcc7d092" class="numbered-list" start="1"><li>Crear, Modificar y Eliminar Preguntas </li></ol><ol type="1" id="d926c410-d25c-496b-b844-ad7f03fdba6b" class="numbered-list" start="2"><li>Asignar preguntas a categorías</li></ol></div></p><p id="4a8116d9-c271-46ab-9456-c3dc026ef2e8" class="">
+</p><ol type="1" id="88eba161-2129-4ce0-b1ad-9f5dab91028c" class="numbered-list" start="5"><li><em><strong>Métricas</strong></em></li></ol><p id="84240bdf-d36a-4c46-b0c9-a263fca7eedf" class="">Módulo para visualizar información relevante y general del desempeño de los TBMs<div class="indented"><p id="17894fcc-41f0-475b-bd88-c061d5c5b48b" class="">Acciones especificas del modulo incluyen:</p><ol type="1" id="2d591c11-59f3-4f1e-8a99-07991b2579b3" class="numbered-list" start="1"><li>Consultar las métricas</li></ol><ol type="1" id="35f7ae4a-5d47-416b-85f5-855237243089" class="numbered-list" start="2"><li>Filtrar métricas</li></ol></div></p><p id="5c481427-b53e-494c-b221-159036e41cff" class="">
+</p><p id="4f430172-a64b-4392-b230-34c6fa7b3e3a" class=""><strong>DEFINICIÓN DE MVP Y ENTREGAS</strong></p><p id="a7fe6415-a821-405d-9693-821071c2800b" class=""><strong>MVP</strong></p><p id="df3c0cbe-2890-48e3-a075-b96cdcc8e9b5" class="">La propuesta de MVP consiste en la primera implementación de los módulos móvil (Recorrido, Formulario, Reporte, Correo) y módulos web (Administración Usuarios, Puntos de Venta, Preguntas) y módulo de Autenticación.</p><ol type="1" id="8785cb8c-951b-420e-b53a-bb5241209db5" class="numbered-list" start="1"><li>Recorrido<ol type="a" id="2f8d6e54-9520-49ad-9e4c-82f25731b06c" class="numbered-list" start="1"><li>Navegar por el mapa.</li></ol><ol type="a" id="f50beead-a072-4814-a714-91b1945a88f5" class="numbered-list" start="2"><li>Guardar los progresos.</li></ol><ol type="a" id="3a0afa9f-58c1-43e3-91a1-cf680fa76a50" class="numbered-list" start="3"><li>Ver los modelos y animaciones básicas.</li></ol></li></ol><ol type="1" id="c671a6e3-6061-426a-8295-f529acd6a84a" class="numbered-list" start="2"><li>Formulario<ol type="a" id="57ed3d7e-b3b0-494f-b0c3-b958180f01e8" class="numbered-list" start="1"><li>Responder preguntas.</li></ol><ol type="a" id="60bc0338-0247-43a0-83fe-898d2f365dc0" class="numbered-list" start="2"><li>Guardar la información.</li></ol><ol type="a" id="1af8679f-2976-423f-8d9d-bdc0a9b8455e" class="numbered-list" start="3"><li>Tomar fotos para el reporte.</li></ol></li></ol><ol type="1" id="e85080eb-1b09-41e0-8948-4d7b0e66a896" class="numbered-list" start="3"><li>Reporte<ol type="a" id="2a5751e5-edaa-4093-86d8-8da3cf412098" class="numbered-list" start="1"><li>Generar el reporte.</li></ol><ol type="a" id="af2537bf-7305-421e-82ab-f4d226d1f71e" class="numbered-list" start="2"><li>Visualizar el reporte.</li></ol></li></ol><ol type="1" id="a32a2668-4dda-47fd-8fab-866361924394" class="numbered-list" start="4"><li>Correo<ol type="a" id="b6bf394d-18dd-48b1-8b63-b7d4b030701d" class="numbered-list" start="1"><li>Enviar correo del reporte</li></ol></li></ol><ol type="1" id="9caec101-b3f4-4954-bfc5-d22bb98649db" class="numbered-list" start="5"><li>Autenticación<ol type="a" id="dbf16871-bb30-457e-bdfa-851ab66b426b" class="numbered-list" start="1"><li>Inicio de sesión.</li></ol><ol type="a" id="6d7b16c7-b282-4a6f-bba2-2887b867f3dc" class="numbered-list" start="2"><li>Cerrar sesión.</li></ol></li></ol><ol type="1" id="3f2a9bc1-ca1a-4ce0-9a4f-f5fd633296f8" class="numbered-list" start="6"><li>Administración Usuarios <ol type="a" id="fe6dcc05-61d5-4b2f-b21a-f866b779487d" class="numbered-list" start="1"><li>Registrar Usuarios.</li></ol></li></ol><ol type="1" id="8667f473-45dd-4a81-8b74-d2980c215b38" class="numbered-list" start="7"><li>Administración Puntos de Venta<ol type="a" id="4d5ed44a-b949-47cd-bc41-be8db24489a8" class="numbered-list" start="1"><li>Ver los puntos de venta.</li></ol><ol type="a" id="2e64e360-e925-4db7-9dd1-92fb93c0a4df" class="numbered-list" start="2"><li>Registrar puntos de venta.</li></ol></li></ol><ol type="1" id="e41c960b-9b13-436e-9467-1ec8df2078bd" class="numbered-list" start="8"><li>Preguntas<ol type="a" id="c36560ac-34ab-4a06-9186-51dadb8b2326" class="numbered-list" start="1"><li>Registrar preguntas.</li></ol><ol type="a" id="629d5fc4-7293-42b9-a714-e81ee549a4f9" class="numbered-list" start="2"><li>Ver preguntas.</li></ol></li></ol><p id="6074bf9d-80a5-40a4-a813-61bdcca0fb16" class="">
+</p><p id="840e0c00-1e18-45cc-b315-f7c824d677c0" class="">Dichas funcionalidades se desarrollarán como primer avance y están sujetas a evolución.</p><p id="228223bd-fc6b-4a42-ba26-a244b4f310a7" class=""><strong>MLP</strong></p><p id="bbe2b6db-c598-4c83-acd2-fc3e8839f86b" class="">Nuestra propuesta MLP es la evolución de las primeras funcionalidades e implementación de los siguientes módulos (Métricas, Historial). Las funcionalidades adicionales al MVP que éste tendría son:</p><ul id="292a5032-ce83-42de-b937-d77bea9a5e2c" class="bulleted-list"><li style="list-style-type:disc">Tener roles de usuario, limitando funcionalidades del sistema según su nivel de acceso como son métricas de equipos, acceso de historial, etc.</li></ul><ul id="42272e16-803e-42ef-9fdd-6c594fdea057" class="bulleted-list"><li style="list-style-type:disc">Editar a los usuarios, puntos de venta y preguntas del sistema.</li></ul><ul id="5a402c15-fe23-470d-a731-2e16b65a8f92" class="bulleted-list"><li style="list-style-type:disc">Generar métricas visuales para ver de manera general el desempeño de todos los empleados.</li></ul><ul id="f4157370-abe3-41fa-8351-5cb01650b405" class="bulleted-list"><li style="list-style-type:disc">Métricas del desempeño de los TBMs en sus respectivas zonas.</li></ul><ul id="4db79b20-b81a-4e34-8229-b4e0ef2ecb41" class="bulleted-list"><li style="list-style-type:disc">Métricas con información sobre los puntos de venta que evalúan.</li></ul><h2 id="e0d806ae-8934-4dc9-8a92-4a0c705185ff" class="">Comunicación con el Cliente</h2><p id="a63112bf-2af1-4a39-9443-3d3fd348203f" class="">Los canales de comunicación utilizados con el Socio Formador son:</p><ul id="bbdea35c-3570-4b9e-9934-ab86bb32116c" class="bulleted-list"><li style="list-style-type:disc">Chat de WhatsApp.</li></ul><ul id="fd0897d8-4f2f-47fa-8533-fd0cfa7d3921" class="bulleted-list"><li style="list-style-type:disc">Correo Electrónico.</li></ul><p id="cca5d09c-2495-4dc2-8276-4a0b923150b9" class="">Con el fin de resolver dudas puntuales así como mostrar el progreso realizado, se tiene una sesión vía <em><em><em><em><em>Zoom </em></em></em></em></em>los días martes a las 12:00 pm de forma semanal ocupando la cuenta del departamento.</p><p id="01c972d4-d620-48c7-ac3b-61b7329cc9b4" class="">
+</p></div></article></body></html>

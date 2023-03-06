@@ -1,0 +1,8 @@
+﻿Versión,Autor,Descripción,Fecha,Revisado,Revisado por
+1.0,"Jorge Guerrero Díaz, Cristian Rico","Creación de la primera versión del SRS.
+Correcciones ortográficas.
+Cambio de nombre.
+Se agrega nueva sección Comunicación con el Cliente.",,Reviewed,"@Emiliano Vásquez Olea @Andres "
+1.0.1,"Emiliano Vásquez Olea, Andres",Pequeños cambios de redacción a módulos de sistema. Se agrego una seguna accion especifica al modulo de reportes (movil).,"March 2, 2023",Reviewed,"@Cristian Rico "
+1.0.2,Cristian Rico,"Revisión Ortográfica ","March 3, 2023",Reviewed,"@Jorge Guerrero Díaz "
+1.1.0,Jorge Guerrero Díaz,"Agregado de métricas especificas ","March 5, 2023",Reviewed," "

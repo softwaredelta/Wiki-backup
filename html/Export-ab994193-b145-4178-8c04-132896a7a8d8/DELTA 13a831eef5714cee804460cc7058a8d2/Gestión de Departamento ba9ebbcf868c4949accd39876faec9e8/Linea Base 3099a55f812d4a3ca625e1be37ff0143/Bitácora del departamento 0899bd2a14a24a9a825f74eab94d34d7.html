@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Bitácora del departamento</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0899bd2a-14a2-4a9a-825f-74eab94d34d7" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1554757387-fa0367573d09?ixlib=rb-4.0.3&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">✏️</span></div><h1 class="page-title">Bitácora del departamento</h1></header><div class="page-body"><h2 id="0004c2a3-0731-4e14-aaf2-52d0979db318" class=""><mark class="highlight-blue">Periodo 1</mark></h2><ul id="160d4d8f-dc34-4296-a0f1-34aed459c27c" class="toggle"><li><details open=""><summary><strong>2023/02/17 (Kenny)</strong></summary><ul id="b74cea38-98b7-4676-a0d7-d51ea3b3efac" class="bulleted-list"><li style="list-style-type:disc">Se estableció un sistema inicial de procesos. Como procesos iniciales, se busca consolidar nuestra documentación - minutas y bitácora - y planeación - pendientes y actividades -. También se iniciará un proceso de retroalimentación basado en <strong>Celebration Grid &#x27;s</strong>, por medio del cual analizaremos los procesos y su efectividad.</li></ul><ul id="2dd69d32-9fe2-4bf8-b5a9-c28b361f72fb" class="bulleted-list"><li style="list-style-type:disc">Se inicia la <strong>bitácora</strong>.</li></ul><ul id="95f8e3a6-dfd6-45bf-bb6a-23870d14e2a8" class="bulleted-list"><li style="list-style-type:disc">Se inicia la <strong>planeación</strong>.</li></ul><ul id="fcc6b555-3e81-4f95-8629-d5589914e2d4" class="bulleted-list"><li style="list-style-type:disc">Se establecieron los objetivos iniciales de reuniones con socios y definición de requerimientos.</li></ul></details></li></ul><ul id="07465702-c2a0-45c4-9827-4bba546a3dd3" class="toggle"><li><details open=""><summary><strong>2023/02/18 (Moni)</strong></summary><ul id="f51d0bbd-06cc-4bdc-8718-bf54fe35a177" class="bulleted-list"><li style="list-style-type:disc">Se estableció la versión calendarizada en excel de la <strong>planeación general</strong>.</li></ul><ul id="bef5b10a-34e3-4233-9208-3ca694057826" class="bulleted-list"><li style="list-style-type:disc">Se definieron los objetivos, preguntas y recursos a preguntarle a los <strong>socios formadores.</strong></li></ul><ul id="2efea9b8-4ab4-4526-b0ec-2ccf3e9fa68c" class="bulleted-list"><li style="list-style-type:disc">Se crearon los <strong>repositorios</strong> de proyectos en GitHub en el repositorio del departamento. Se creó la template de Issues.</li></ul><ul id="be858442-f4f0-48d2-989a-3705f05256d6" class="bulleted-list"><li style="list-style-type:disc">Se creó el documento de <strong>experimentos</strong>.</li></ul><ul id="b6351301-4c56-456a-8679-b5887f3e2381" class="bulleted-list"><li style="list-style-type:disc">Se añadió <strong>control de cambios </strong>al documento de <strong>procesos</strong>.</li></ul></details></li></ul><ul id="34696794-f29f-48cb-b802-a6b1f0bcd92d" class="toggle"><li><details open=""><summary><strong>2023/02/20 (Kenny)</strong></summary><ul id="b7805bac-0f20-4937-b18b-3ad665dad07f" class="bulleted-list"><li style="list-style-type:disc">Presentación de las líneas de vida de los miembros del departamento.</li></ul><ul id="fe3e2fb6-4686-439d-94b6-bcdc12ea0d1b" class="bulleted-list"><li style="list-style-type:disc">Se realizó la primera reunión con los socio-formadores <strong>Grupo Asesores RAM</strong>. Con ellos se establecieron las reuniones recurrentes todos los viernes, así como una segunda reunión el martes y el viernes (de esta misma semana) para la validación de la <strong>propuesta de Arquitectura, Alcance y MVP</strong>.</li></ul><ul id="b1f8f240-53f5-45e6-a6c3-d0fe27c99751" class="bulleted-list"><li style="list-style-type:disc">Clase con Carlos sobre características de calidad. Teoría sobre estándares, modelos, metodologías, etc.</li></ul><ul id="4583537c-7730-4e93-b61c-aacddd22825d" class="bulleted-list"><li style="list-style-type:disc">Clase con Claud, introducción a Requirements Engineering.</li></ul><ul id="8c9362f0-35a4-4e4f-aa12-9a1a9e2b5ce4" class="bulleted-list"><li style="list-style-type:disc">Se establecieron nuevos canales en el servidor de discord para aumentar la comunicación.</li></ul></details></li></ul><ul id="ddf6edc8-b9ed-4808-b014-75fac430fa85" class="toggle"><li><details open=""><summary><strong>2023/02/21 (Emiliano)</strong></summary><ul id="1230f857-6eb8-44df-8399-af042259209c" class="bulleted-list"><li style="list-style-type:disc">Segunda reunión con <strong>Grupo Asesores RAM</strong>. Discusión sobre procesos de inducción, campañas, bonos, ventas, etc.</li></ul><ul id="e63488e7-8ebb-40aa-9f25-c21181bbcbb7" class="bulleted-list"><li style="list-style-type:disc">Primera reunión por Zoom con el representante de <strong>Michelín</strong>. Se aclararon requisitos del proyecto y se solicitaron diferentes recursos como estándares, formularios y ejemplos. Se agendaron reuniones recurrentes los martes a las 12:00 PM y una el viernes de esta misma semana para presentar la propuesta de proyecto.</li></ul><ul id="45a8f381-0fda-4df4-8bd5-713abb2e6ef5" class="bulleted-list"><li style="list-style-type:disc">Los Product Owners y Team Leads de cada proyecto comenzaron a utilizar el excel de <strong>Planeación y Entregables</strong> para estimar sus tiempos y repartir su trabajo.</li></ul><ul id="4121bc53-7940-4a98-b855-e70d2de0f2c4" class="bulleted-list"><li style="list-style-type:disc">Reunión de equipo RAM para definición inicial de propuestas de requerimientos.</li></ul><ul id="f762e7e1-0c24-4700-bb47-e0a9e48966b7" class="bulleted-list"><li style="list-style-type:disc">Clase introductoria al <strong>CMMI</strong>.</li></ul><ul id="4b4115e4-1d60-4a5e-9fec-1b22d7f5992a" class="bulleted-list"><li style="list-style-type:disc">Reunión de <strong>Michelin, </strong>se generaron el <strong>Impact Mapping</strong> y el <strong>Gain/Pain Map</strong> para integrar los módulos.</li></ul></details></li></ul><ul id="ab8f7cd7-9094-45be-82e9-0ead116b0e41" class="toggle"><li><details open=""><summary><strong>2023/02/22 (Kenny, Oli y Moni)</strong></summary><ul id="8d06f61d-c964-4eb6-ab26-bedc2e13009f" class="bulleted-list"><li style="list-style-type:disc">Reunión de arquitectos y Team Lead para la primera propuesta de arquitectura general y tecnologías para <strong>Grupo RAM</strong>.</li></ul><ul id="30c3ffc5-b30e-4efd-bc8e-fdcf16f1b9fa" class="bulleted-list"><li style="list-style-type:disc">Reunión de <strong>PO</strong>s de <strong>Grupo RAM</strong> para generación de <strong>módulos y MVP</strong>.</li></ul><ul id="697d9013-bab2-45e2-92b7-f5d79c5cfbc1" class="bulleted-list"><li style="list-style-type:disc">Reunión de <strong>Michelin</strong> de revisión de <strong>recursos</strong> provistos por el socio, <strong>User Journey Map</strong> determinación del flujo de las aplicaciones y generación de prototipo de<strong> alto nivel</strong>.</li></ul><ul id="cf373256-41b1-4e9f-93f4-b795339dd9ea" class="bulleted-list"><li style="list-style-type:disc">Reunión departamental en la que se hizo una dinámica en un Fig Jam para definir los acuerdos de DELTA. Se generó el documento de <strong>Acuerdos de Departamento</strong>.</li></ul><ul id="473f1041-6061-4fd9-a416-aca516193ea7" class="bulleted-list"><li style="list-style-type:disc">Se decidió que la Program Manager ya no estuviera en el equipo de <strong>PO</strong>s de <strong>Grupo RAM</strong>.</li></ul><ul id="f46466a9-37f3-4cad-ab04-da949efb7e81" class="bulleted-list"><li style="list-style-type:disc">Se comenzó a trabajar la <strong>wiki</strong> departamental en Notion.</li></ul><ul id="c4489ac5-c229-49b0-8a5e-8b7e1b1428cb" class="bulleted-list"><li style="list-style-type:disc">El departamento tuvo discusiones de ética sobre varios casos.</li></ul><ul id="78ecc8a6-7a53-46a5-9136-056a721ef399" class="bulleted-list"><li style="list-style-type:disc">El departamento tuvo clase de definición de requerimientos.</li></ul><ul id="f72e1951-e713-4bc5-90dd-0044f7a40f0c" class="bulleted-list"><li style="list-style-type:disc">El departamento de DELTA identificó varios nuevos experimentos a probar, entre ellos:<ul id="f1d32757-d19e-4de7-ab7d-99f9614ef208" class="bulleted-list"><li style="list-style-type:circle">Club de Lectura</li></ul><ul id="40747b95-d574-457c-8a61-783c1331c485" class="bulleted-list"><li style="list-style-type:circle">Capacitaciones impartidas por miembros de delta</li></ul><ul id="dc93d3fc-6810-4fdf-be3a-14f4ddb2c5ec" class="bulleted-list"><li style="list-style-type:circle">Calendario de horarios de miembros Delta (sólo se tiene un w2m)</li></ul><ul id="d0c6dd27-b8d2-407d-af9b-5f451c8076df" class="bulleted-list"><li style="list-style-type:circle">SPI y CPI (Timelogs de manera gráfica)</li></ul><ul id="2499be45-d0d1-4fd1-890a-a26c73d181a6" class="bulleted-list"><li style="list-style-type:circle">Merch de delta (stickers)</li></ul><ul id="80fc91da-714c-4a31-949a-3a4ca3be5bef" class="bulleted-list"><li style="list-style-type:circle">Protocolo para lidiar con el conflicto.</li></ul></li></ul></details></li></ul><ul id="f7be46e9-6ac8-411d-9c4c-23dad37eacb7" class="toggle"><li><details open=""><summary><strong>2023/02/23 (Moni, Kenny)</strong></summary><ul id="65afb8ae-33d0-4a9b-adff-9a1e50cae317" class="bulleted-list"><li style="list-style-type:disc">Se reunió el equipo <strong>Michelin</strong> para definir sus módulos, priorizarlos, definir el alcance y MVP.</li></ul><ul id="36cbb000-e34f-4b6a-affd-a8a20211f3e6" class="bulleted-list"><li style="list-style-type:disc">Se creó el documento formato de <strong>Validación de Propuesta</strong>.</li></ul><ul id="2f63beb1-b643-4d14-a898-bfc51e77955a" class="bulleted-list"><li style="list-style-type:disc">Se comenzó la creación de la wiki en <strong>Notion</strong>, así como la migración de la fuente de verdad.</li></ul><ul id="c2e6050f-a935-4bc1-896f-c687e69351d8" class="bulleted-list"><li style="list-style-type:disc">Se reunió el equipo <strong><strong><strong>RAM</strong></strong></strong>. Se definieron los módulos de trabajo que se presentarán a los clientes.</li></ul><ul id="6eb9fa1e-ad57-429c-a760-9bf9e3903434" class="bulleted-list"><li style="list-style-type:disc">Se agregan <strong>repositorios </strong>para soluciones de clientes a la base de datos de productos de trabajo.</li></ul></details></li></ul><ul id="1eacfbaf-aab9-4ff8-a19a-606d2983a5bf" class="toggle"><li><details open=""><summary><strong>2023/02/24 (Kenny)</strong></summary><ul id="2076f92a-5026-4cd0-99a6-37f6a2c8317d" class="bulleted-list"><li style="list-style-type:disc">Reunión con <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Asesores Grupo RAM</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong> para primer propuesta de módulos y firma de documento de validación de propuesta.</li></ul><ul id="db37a10e-9692-4b3f-ab97-5776f5519a6d" class="bulleted-list"><li style="list-style-type:disc">Reunión de <strong><strong>PO</strong></strong>s <strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Asesores Grupo RAM </strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>después de brainstorm para solucionar situación con ventas, bonos, negocios, etc.</li></ul></details></li></ul><ul id="09787a25-066b-4b54-92b0-133a4cee7802" class="toggle"><li><details open=""><summary><strong>2023/02/27 (Moni)</strong></summary><ul id="67be619c-e158-4d2b-a28d-b7320f52279b" class="bulleted-list"><li style="list-style-type:disc">El rol de <strong>Olivia Morales </strong>cambió a Program Manager para el primer periodo.</li></ul><ul id="a9833be4-1b9b-4269-90dc-129d2b2481ee" class="bulleted-list"><li style="list-style-type:disc">Se reunió con el profesor Eduardo Juarez para discutir sobre la propuesta de <strong>Michelin</strong> para tener Proveedores.</li></ul><ul id="668b015d-9fcf-4eaa-b4a4-f7b32e1ca913" class="bulleted-list"><li style="list-style-type:disc">Se comenzó a definir la matriz de SCAMPI en notion para llevar acabo que productos de trabajo y procesos usamos para cada práctica específica de un área de proceso.</li></ul><ul id="9d1b6c96-deb7-4d03-ad82-aaee5ddfb3ee" class="bulleted-list"><li style="list-style-type:disc">El equipo de Grupo Asesores RAM acordó el miércoles de 10am-12pm para la reunión con el socioformador.</li></ul></details></li></ul><ul id="53f8249b-b86d-436f-a0bf-26497a399925" class="toggle"><li><details open=""><summary><strong>2023/03/02 (Moni)</strong></summary><ul id="f5be97ec-e94a-4297-852f-b8d4b20bb21a" class="bulleted-list"><li style="list-style-type:disc">Se tuvo una junta con el equipo CMMI en el que se definió la Matriz RACI a ser usada para saber quién <a href="https://docs.google.com/spreadsheets/d/19yI-NPQQVjO3kzdbDmYF9dPO7SqSGOXRm3zGwtVRZL0/edit#gid=0">Matriz RACI CMMI</a>.</li></ul><ul id="34eee87c-8953-452b-ba13-2637afd5689b" class="bulleted-list"><li style="list-style-type:disc">Se definió el Proceso para la definición de Experimentos.</li></ul><ul id="68c05e93-8912-46c7-a4fe-95d8fff05fa7" class="bulleted-list"><li style="list-style-type:disc">Se implementaron templates para Guías, Experimentos y Procesos.</li></ul><ul id="32badf92-5348-4b44-a872-e472eb44d598" class="bulleted-list"><li style="list-style-type:disc">Se fusionaron los Acuerdos de Trabajo con las Políticas.</li></ul><ul id="0fb81b32-a784-4482-bd7f-10cd26122511" class="bulleted-list"><li style="list-style-type:disc">Se creó un nuevo apartado fuera de Controlado y Escritorio.<ul id="d9f7617d-8b12-4f47-93ac-c65e270ab8aa" class="bulleted-list"><li style="list-style-type:circle">Se migró el SCAMPI, Experimentos y la Matriz de Configuración</li></ul></li></ul><ul id="0937a68c-eaa6-461e-a88e-86420bb42b91" class="bulleted-list"><li style="list-style-type:disc">Se pasaron las minutas a experimentos.</li></ul><ul id="a3cbf047-b551-4dba-b72d-7defb0f1bac8" class="bulleted-list"><li style="list-style-type:disc">Se comenzaron a definir experimentos.</li></ul><ul id="bd3a81ff-9fd6-4b44-9e83-52c1f368b85d" class="bulleted-list"><li style="list-style-type:disc">Se implementó el SPI y CPI en la planeación de Excel de ambos equipos.</li></ul><ul id="71e8af8c-fd83-4541-a990-c43904b76943" class="bulleted-list"><li style="list-style-type:disc">Formalmente se cambiaron los nombres de equipo Michelin → Deltalín y equipo RAM → Deltram.</li></ul></details></li></ul><h2 id="a2cf7ed5-63a5-46e9-91ec-63ea2a316975" class=""><mark class="highlight-blue">Periodo 2</mark></h2><h2 id="db89c8fe-ef43-4c83-87ad-e2ba8dc30625" class=""><mark class="highlight-blue">Periodo 3</mark></h2></div></article></body></html>

@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>0.1.0</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="dcdcef80-98f1-4b87-a62b-7122cd27aba2" class="page sans"><header><h1 class="page-title">0.1.0</h1><table class="properties"><tbody><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Autor</th><td><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">M</span></span>Monica Ayala</span></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M1.56738 3.25879H14.4258C14.7676 3.25879 15.0479 2.97852 15.0479 2.63672C15.0479 2.29492 14.7744 2.02148 14.4258 2.02148H1.56738C1.21875 2.02148 0.952148 2.29492 0.952148 2.63672C0.952148 2.97852 1.22559 3.25879 1.56738 3.25879ZM1.56738 6.84082H14.4258C14.7676 6.84082 15.0479 6.56055 15.0479 6.21875C15.0479 5.87695 14.7744 5.60352 14.4258 5.60352H1.56738C1.21875 5.60352 0.952148 5.87695 0.952148 6.21875C0.952148 6.56055 1.22559 6.84082 1.56738 6.84082ZM1.56738 10.4229H14.4258C14.7676 10.4229 15.0479 10.1426 15.0479 9.80078C15.0479 9.45898 14.7744 9.18555 14.4258 9.18555H1.56738C1.21875 9.18555 0.952148 9.45898 0.952148 9.80078C0.952148 10.1426 1.22559 10.4229 1.56738 10.4229ZM1.56738 14.0049H8.75879C9.10059 14.0049 9.38086 13.7246 9.38086 13.3828C9.38086 13.041 9.10742 12.7676 8.75879 12.7676H1.56738C1.21875 12.7676 0.952148 13.041 0.952148 13.3828C0.952148 13.7246 1.22559 14.0049 1.56738 14.0049Z"></path></svg></span>Descripción</th><td>Creación del resumen de negocio</td></tr><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Fecha</th><td><time>@March 3, 2023</time></td></tr><tr class="property-row property-row-person"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesPerson"><path d="M10.9536 7.90088C12.217 7.90088 13.2559 6.79468 13.2559 5.38525C13.2559 4.01514 12.2114 2.92017 10.9536 2.92017C9.70142 2.92017 8.65137 4.02637 8.65698 5.39087C8.6626 6.79468 9.69019 7.90088 10.9536 7.90088ZM4.4231 8.03003C5.52368 8.03003 6.42212 7.05859 6.42212 5.83447C6.42212 4.63843 5.51245 3.68945 4.4231 3.68945C3.33374 3.68945 2.41846 4.64966 2.41846 5.84009C2.42407 7.05859 3.32251 8.03003 4.4231 8.03003ZM1.37964 13.168H5.49561C4.87231 12.292 5.43384 10.6074 6.78711 9.51807C6.18628 9.14746 5.37769 8.87231 4.4231 8.87231C1.95239 8.87231 0.262207 10.6917 0.262207 12.1628C0.262207 12.7974 0.548584 13.168 1.37964 13.168ZM7.50024 13.168H14.407C15.4009 13.168 15.7322 12.8423 15.7322 12.2864C15.7322 10.8489 13.8679 8.88354 10.9536 8.88354C8.04492 8.88354 6.17505 10.8489 6.17505 12.2864C6.17505 12.8423 6.50635 13.168 7.50024 13.168Z"></path></svg></span>Revisado Por</th><td><span class="user"><span class="icon text-icon user-icon"><span class="user-icon-inner">K</span></span>Kenny Eduard Vercaemer González</span></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Revisión</th><td><span class="status-value select-value-color-green"><div class="status-dot status-dot-color-green"></div>Reviewed</span></td></tr></tbody></table></header><div class="page-body"><h1 id="cfe9179a-140f-4aab-99dd-35fb78c188cc" class="">Compromisos del equipo con Grupo RAM:</h1><ul id="59df8436-c723-48fe-a4b2-39a9bfa2f8b5" class="bulleted-list"><li style="list-style-type:disc"><strong>Viernes de 9:00 - 10:00 a.m</strong>: Validación de requerimientos. Junta para firmar el alcance del proyecto, MVP y módulos.</li></ul><ul id="9538009f-fb6e-48b2-96ec-ea272c43f0cd" class="bulleted-list"><li style="list-style-type:disc">Traer la propuesta económica de servidores para el <strong>viernes 24/2/2023</strong>.</li></ul><ul id="7e588d90-3626-49da-8620-3cfcad0c1f8b" class="bulleted-list"><li style="list-style-type:disc">Reporte <strong>semanal</strong> todos los viernes, hora a tratar durante la semana.</li></ul><ul id="7e17dac4-0727-449b-8c65-09a5b910d0cb" class="bulleted-list"><li style="list-style-type:disc">Canales de comunicación por WhatsApp y correo si se necesita una validación rápida, disposición total por parte de ellos.</li></ul><ul id="c4ba8193-23bb-4d9d-ab28-f8d4ed28dac5" class="bulleted-list"><li style="list-style-type:disc">Ellos deben agendar<strong> citas con los gerentes </strong>de distintas áreas, así como con mínimo un agente de cada generación.</li></ul><h2 id="8cba2e94-2699-412c-85a8-c73c0cf2d6e8" class=""><strong>Organigrama:</strong></h2><figure id="e8044227-8e96-4e96-b681-04f8adc8a010" class="image"><a href="../organigrama_ram.jfif"><img src="../organigrama_ram.jfif"/></a></figure><figure id="71a193f6-0b07-4639-a94e-8ffffb177442"><a href="https://drive.google.com/drive/u/1/folders/1fAwsB1_l0sCynAklk9ZsymYF6MaQq9er" class="block-color-orange_background bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://drive.google.com/drive/u/1/folders/1fAwsB1_l0sCynAklk9ZsymYF6MaQq9er</div></div></a></figure><h1 id="1c1ec7e3-a0d9-4a65-b87a-c6be3f532cd7" class=""><strong>Proceso de Grupo Asesores RAM.</strong></h1><h2 id="3b47a50c-2783-46f9-b976-32f7fc9672eb" class=""><strong>Reclutamiento, Selección e Iniciación.</strong></h2><p id="baea8be9-48e2-4fc6-8933-ea58e3c4f7ec" class=""><strong>Involucrados: </strong>Gerente de EDAT, Valeria Herrera y equipo externo de reclutadores + Prospectos de Agentes.</p><p id="e370041f-dfdf-455f-9935-9322d94a81c1" class=""><strong>Duración: </strong>2 Semanas.</p><p id="997d0266-3674-4374-9d0c-488dda02de3e" class=""><strong>Contexto:</strong></p><p id="032d5bf5-adff-420b-9eee-1571374fbe44" class="">En el área de EDAT (Reclutamiento/Desarrollo de Talento) está la gerente de EDAT, Valeria Herrera, y por fuera tienen a un pequeño equipo de reclutadores. Quieren tener un flujo constante de personas para crecer como grupo y tener más agentes.</p><p id="67c968d9-bb45-4d8d-a51d-42d20a1a1934" class="">Primero el equipo de reclutadores se fija en que los prospectos para agente cumplan con un cierto perfil.</p><table id="ba9b6e25-8e73-4ca7-a68c-fd7041f7495b" class="simple-table"><tbody><tr id="0cd74a67-bc70-4d0c-a012-10ecdd8b5c0f"><td id="\rPV" class=""><strong>Característica</strong></td><td id="}c?y" class=""><strong>Descripción</strong></td></tr><tr id="d2395c00-83c1-446c-864b-27aed523eb68"><td id="\rPV" class="">Edad</td><td id="}c?y" class="">25 a 55 años</td></tr><tr id="e943aa6e-6501-4089-9a14-5dfb4d4a593e"><td id="\rPV" class="">Sexo</td><td id="}c?y" class="">Indistinto</td></tr><tr id="93b1c115-06c8-4121-9838-290c79ce5822"><td id="\rPV" class="">Escolaridad</td><td id="}c?y" class="">Licenciatura (obligatoria)</td></tr><tr id="fffb887b-368d-4299-a825-fb4f7561d8d0"><td id="\rPV" class="">Herramientas de trabajo</td><td id="}c?y" class="">Smartphone, laptop, auto, internet- en buen estado</td></tr><tr id="7314e903-cc93-44c9-88c0-e773f00ddcd0"><td id="\rPV" class="">Disponibilidad del tiempo</td><td id="}c?y" class="">Tiempo completo (100%) - Y en caso de mamás, hijos en escuela presencial y mayor a 2 años.</td></tr></tbody></table><p id="3186764c-dbf9-4820-ba39-1ece7082ffbc" class="">Existen varias fuentes de reclutamiento de las cuáles les gustaría saber el porcentaje que vienen de una fuente vs otras.</p><figure id="fdb8ebea-d4be-43b3-854c-bf0fcef6449f" class="image"><a href="https://lh4.googleusercontent.com/UGrsWehEnhS-IXbnj_7T9x5NNtAwvPFwaz_nr93P1Jw2YQ29mxlMvtZG9YUHRrk3wrg7YTZTBSOh1Hl8eA6K9aD3R9qwdDMGTJz_goHzaAkdih7zymd6iFhuq107pVyzhARo2sRZdJ4XiUSl8qzw894"><img src="https://lh4.googleusercontent.com/UGrsWehEnhS-IXbnj_7T9x5NNtAwvPFwaz_nr93P1Jw2YQ29mxlMvtZG9YUHRrk3wrg7YTZTBSOh1Hl8eA6K9aD3R9qwdDMGTJz_goHzaAkdih7zymd6iFhuq107pVyzhARo2sRZdJ4XiUSl8qzw894"/></a></figure><p id="54310e68-200a-4b51-8e07-9b49ec3d9099" class="">El equipo de reclutadores hace el primer contacto con posibles Asesores y consigue una cita para la Gerente de EDAT.</p><p id="c1db2032-aa26-43d0-9802-8669d41fd0a2" class="">La primera entrevista con el Gerente de EDAT (Reclutadora) se lleva a cabo con el documento <a href="https://docs.google.com/spreadsheets/d/1DV8_hWmFphWWJ5xHBvCkt5G2z0G3qV63/edit?usp=share_link&amp;ouid=104685609645227355073&amp;rtpof=true&amp;sd=true">Radiografía</a>.</p><p id="6cdf6420-eef0-46e8-95cd-dabb46f6dc7b" class="">El proceso de obtención de cédula con GNP (parte del onboarding) dependerá de si tienen crédito infonavit o si ya tienen cédula con GNP.</p><p id="080ff187-4675-4044-ac12-f3b0e8f1d766" class="">Se usa la radiografía y perfil básico para saber quienes serán buenos vendedores.</p><p id="518ea64a-a9de-4ed1-a8ce-a91c1dd568cf" class="">Factores knockout y factores vitales (evaluaciones por entrevista con el EDAT, GDD, DA que se registra en <a href="https://docs.google.com/spreadsheets/d/1DV8_hWmFphWWJ5xHBvCkt5G2z0G3qV63/edit?usp=share_link&amp;ouid=104685609645227355073&amp;rtpof=true&amp;sd=true">Radiografía</a>).</p><p id="bdc76787-4dae-4235-9d9f-fa75f1a53aff" class="">Evaluación PSP hecha por LIMRA para saber estilo de venta.</p><p id="489285b5-1a8d-4ac1-8c45-06069650a648" class="">2da entrevista: les venden la forma de trabajar de RAM, la empresa y sus servicios. Les mencionan que:</p><p id="7a36c542-4581-4321-8efe-0d6a7f310a69" class="">El GDD (Gerente de Desarrollo) les dará seguimiento.</p><p id="0131f7f4-1161-4318-9135-5c4c565bb93b" class="">El GDD decide finalmente si te quedas en el equipo.</p><p id="4cde5e39-5c0c-4187-b517-316c11834c85" class="">Te piden 50 prospectos para el <a href="https://docs.google.com/spreadsheets/d/1_Ow7-GO0d3r30YHDvt3zsJqE4H1-0hHEfM4lN-nUqLM/edit?usp=share_link">PP200</a></p><p id="ef56cdff-5971-4209-a129-9e1e30110e95" class="">El <a href="https://docs.google.com/spreadsheets/u/1/d/1_Ow7-GO0d3r30YHDvt3zsJqE4H1-0hHEfM4lN-nUqLM/edit">PP200</a> sirve para que los agentes clasifiquen a su mercado de posibles clientes.</p><p id="c0e28592-8252-411f-acb8-e1ed7408658c" class="">Cuando el GDD da el visto bueno → Iniciación/Onboarding.</p><p id="94b7e5b2-deb8-436e-9e58-6b50de09d4e4" class="">La inducción se da cada 15 días. Idealmente entrarían de 4 a 5 agentes pero hay veces que son muchos menos.</p><p id="b889eb28-719b-42c6-9bd6-f5e87fd0c9f1" class="">No eliminan los perfiles que no cumplen los requisitos porque quieren tener los datos para el futuro (si años después un agente regresa al proceso de reclutamiento) y por que a veces les hace falta candidatos.</p><p id="76edb6f3-074b-4269-a770-3f9119350d49" class="">La reclutadora hace 15 entrevistas por semana → 5 entrevistas con Luis/Claudia → 3 con el GDD → 2 a inducción</p><h2 id="c2cb1181-3c64-44e0-87fc-0dfab7a3e9ce" class=""><strong>Desarrollo, Capacitación y Plan de Carrera.</strong></h2><p id="506bdc9e-8230-4633-944c-b1d1853e390b" class=""><strong>Involucrados: </strong>Gerente de Capacitación, Martha Arriola + Gerente de Desarrollo, Gustavo Pérez + Prospectos de Agentes.</p><p id="c39fda10-36f3-4f6b-9947-070bf3b1dbf0" class=""><strong>Duración: </strong>Siempre siguen capacitándose.</p><p id="448c3172-4b18-46a9-8d2f-589e11303550" class=""><strong>Contexto: </strong>Hay un plan de carrera de GNP en un portal y adicionalmente el plan de RAM que se basa en un calendario que se actualiza mensualmente. Todos los gerentes se involucran en el proceso de capacitación, sobre todo en el primer trimestre que ingresan los agentes.</p><p id="4baa7ca4-e527-4908-aa5a-bb2610741708" class="">Los GDD los empiezan a capacitar y mandan el <a href="https://drive.google.com/file/d/1muHsDUzq1WxVJX8IfBIKaosoMEinJFRC/view?usp=share_link">Calendario</a>.</p><p id="3761a82d-0289-4095-868b-487cbcd27773" class="">Se les piden sus <a href="https://drive.google.com/file/d/1o7JOP1LDQSR9ZLPNWOd7hESrhQmvLNp6/view?usp=share_link">documentos necesarios</a> para integrarlos a RAM (CV, Acta de Nacimiento, INE, etcétera).</p><p id="6ac593f2-add0-4425-9128-dc27885009fc" class="">El lunes inicia la inducción y deben de traer sus <a href="https://docs.google.com/spreadsheets/d/1_Ow7-GO0d3r30YHDvt3zsJqE4H1-0hHEfM4lN-nUqLM/edit?usp=share_link">50 prospectos</a>.</p><p id="4886e4fd-9559-419f-b671-d28af76d0885" class="">Los agentes tienen el portal de <a href="https://www.ideasgnp.com.mx/">https://www.ideasgnp.com.mx/</a> para los cursos que otorga GNP y de igual manera la capacitación día con día de RAM.</p><p id="68fd0ba5-a886-46be-bb44-655c56225ec0" class="">RAM tiene acceso a los perfiles de <a href="https://www.ideasgnp.com.mx/"><em>ideasgnp</em></a> de cada agente para ver cómo han ido avanzando en las distintas clases.</p><p id="767f048b-fa98-43ee-9f7a-bcdc05cb20e9" class="">GNP maneja sus niveles llamados <a href="https://drive.google.com/file/d/1RE6U9heX60-V1NaZMbbfl5xvRChHDJkQ/view?usp=share_link">designaciones</a> según ciertos requisitos.</p><p id="d7460582-d0f2-4c1d-8dbe-6611343e8318" class="">RAM por su parte lo divide en generaciones. Generación 1 (primer año), Generación 2 (segundo año), Generación 3 (tercer año), Generación 4 (cuarto año), Consolidados (5+ años).</p><p id="d39d6726-3017-4c5b-ae96-593611a4e97f" class="">El sistema de GNP no tiene una manera de mostrar el <em><strong>overview</strong></em> de todo y en lugar tienes que ir agente por agente.</p><p id="7f037724-6792-4255-8709-d544ce80d722" class="">RAM sugiere inscribir 2 o 3 cursos de GNP por mes, para un buen balance de capacitación con ventas.</p><p id="c5c5f693-fb26-414b-b23b-b69d5e39f19b" class="">RAM sugiere que cuando eres consolidado tengas mínimo un APSS, sólo cuentan con 2 masters.</p><p id="b217a9c5-0ae8-4210-a785-943c8edc3e77" class="">RAM dice que un agente es la suma de su formación (cursos) y su productividad (prospección y venta).</p><p id="116b6ff4-e4c6-4f6d-9101-c3f92feab9ab" class="">Mensualmente los gerentes se reúnen a hacer la planeación de la capacitación y los temas.</p><p id="4ed4cfe5-7c8f-4ed1-948d-ee9e6deacc13" class="">El viernes se pasan gerente por gerente a presentar.</p><p id="fde50e26-725a-438c-b700-62fc3e7ce057" class="">Más o menos 25% de los agentes están en retiro/casi no venden nuevo pero tienen una gran <strong>cartera</strong>. El resto se divide en muy productivos que no requieren seguimiento (10%) y unos poco productivos que necesitan más seguimiento (65%).</p><p id="f4e1c974-3d9c-47bb-b262-72bed4368659" class="">GNP y RAM manejan distintos esquemas de bonos como parte del <a href="https://drive.google.com/file/d/1sn_0Wjnb1UwdYtJ9OyfPmvab8HwggHjz/view?usp=share_link">PAI </a>(Programa Anual de Incentivos)</p><p id="c2d0a9df-961c-4332-9bef-e3cba835a6e6" class="">En generaciones de más años la capacitación ya no es tan rigurosa pero los cursos se siguen actualizando e incluyendo.</p><p id="b229e827-1c35-47db-bc91-e5ef478d5236" class="">Hay objetivos semanales que deben de cumplir en el <a href="https://drive.google.com/file/d/1muHsDUzq1WxVJX8IfBIKaosoMEinJFRC/view?usp=share_link">Calendario</a>. Cada requisito tiene una ponderación y la calificación final define si se quedan o no en el programa de ventas de RAM.</p><p id="58022e55-48db-461a-9a1f-6b3f2d088c23" class="">El GDD es quién está detrás de ellos para que llenen esta información, aunque deberían de ellos querer llevar su propio seguimiento del plan de carrera.</p><p id="7fa7eccf-1a73-4397-b888-f6a126fda62b" class="">En las primeras citas que hacen los Noveles (nuevos agentes) son acompañados por los gerentes/su GDD.</p><p id="80d30d2e-a2d4-453b-a424-992a1fa15973" class="">Muchas veces no saben qué documentos llevar a cada cita y en qué proceso están, ya que a veces se requiere llevar cotizaciones u otros docs.</p><p id="2f5bc41c-d19f-4202-9444-909c2af47120" class="">En la semana 2 a 3 deben de ya estar haciendo su negocio para vender un plan de vida y obtener una prima mayor a 13,000. Esto para pronto darles una célula definitiva.</p><p id="be040b2e-63d8-498f-b99e-10cd36cd2937" class="">Se les va preparando para el exámen de cédula (que debe renovarse cada 3 años a menos de que se exenten por una calificación muy alta).</p><p id="ff30a7f5-dca3-478f-9f06-e467eff2b750" class="">El primer trimestre es crucial porque define el año lo que define el desempeño del agente.</p><p id="43563211-2336-40b4-8756-47909b0fe04b" class="">En este proceso de onboarding es de vital importancia saber el estado de la <strong>cédula</strong> emitida por GNP. Primero se da una cédula provisional (con exámen fácil) y luego una cédula definitiva (exámen difícil) y se requiere tener 1 negocio PAI con prima mayor a 13,000.</p><p id="364cfb11-a081-4456-874f-07140860d6ab" class="">Inducción → Conexión → Cambio de Esquema.</p><p id="3624821d-2a3c-4bcc-ab96-9591f7f05d58" class="">(Cuándo tienen crédito infonavit van directamente a cédula definitiva, si ya tienen cédula esta etapa es más sencilla.)</p><p id="ad1cb251-0740-4ff5-b0a1-ad1094689e8b" class=""><a href="https://drive.google.com/file/d/13FIfn-cgGd1bqu664FXP16ISPVeDM-Yu/view?usp=share_link">Segmentación:</a></p><p id="bc77e192-c109-48e1-9827-664836a11d77" class="">Agente Base: 50,000 mxn prod al mes variado + otras cosas</p><p id="05ab7882-0933-40b4-8e43-66d455c1c120" class="">Agente Plus: 50,000 mxn prod al mes en vida + otras cosas</p><p id="53b30e38-f75b-4e98-8230-bfaac0ff846e" class="">Agente Elite: 50,000 mxn prod variado + 50,000 prod vida + otras cosas.</p><h2 id="e556701f-30ac-416f-9ead-0f83599293b2" class=""><strong>Ventas y Seguimiento.</strong></h2><p id="49f71c13-bb02-4033-920b-f8f77bcddbf7" class=""><strong>Involucrados: </strong>Gerente de Desarrollo, Gustavo Pérez + Gerentes de cada ramo + Prospectos de Agentes.</p><p id="0cfa1c20-5d32-4bb2-9767-424ece6d9a3b" class=""><strong>Duración: </strong>Siempre siguen vendiendo.</p><p id="82b52372-692c-4c65-a83b-03da7edd35bf" class=""><strong>Contexto: </strong>Los agentes empiezan a vender seguros casi desde su segunda semana y deben de mantener un ritmo constante. El crecimiento puede llegar a ser muy natural y existen varios bonos e incentivos de producción. Mientras más ganen los agentes, más gana RAM.</p><p id="88cc77c7-c5c9-44d9-8ba5-f80fc54f6d8b" class="">Documento de <a href="https://drive.google.com/file/d/1Oit1diwdpdgkjINIpZ8djALPUqtbgs0l/view?usp=share_link">ciclo de la vida</a> de una venta.</p><p id="57b20bd8-56c3-41f3-9b5e-abd6c955b342" class="">Prospección (<a href="https://docs.google.com/spreadsheets/d/1_Ow7-GO0d3r30YHDvt3zsJqE4H1-0hHEfM4lN-nUqLM/edit?usp=share_link">PP200</a>) que implica la segmentación de su mercado.</p><p id="bcb31e1b-0834-4f81-bb1f-d269b099c4e7" class="">Estado de las citas con cada cliente, gráficas.</p><p id="a9f1317b-5647-4e85-be90-1a2668fa64e4" class="">Calculadora de “<a href="https://docs.google.com/spreadsheets/d/1_Ow7-GO0d3r30YHDvt3zsJqE4H1-0hHEfM4lN-nUqLM/edit?usp=share_link">Si hago esto puedo ganar tanto...</a>”</p><p id="562100c8-62c0-4d69-997d-302772df5ca5" class="">PAI individual ver como van para lograr cada bono.</p><p id="1208a73a-a6b8-427b-9ad7-ffa35cd8a2a6" class="">Saber su embudo de ventas (Cuántos prospectan, cuantos tienen citas, cuantos hacen cierre, cuantos pagan..)</p><p id="0ad1465b-1c40-4df9-9738-b1a81a072cf8" class="">Los agentes tienen un portal de<em><strong> intermediarios gnp</strong></em> (para ver cotizaciones, formatos, información), el de <em><strong>ideasgnp</strong></em> (para cursos), calendario, carpeta Agentes 317.</p><p id="828fa966-4858-4b6a-b721-aad0611c7af3" class="">Primer acercamiento con WA/llamadas.</p><p id="13102c80-0632-4da4-bd7d-b0af1686b522" class="">Primera entrevista para vender la compañía y reconocer necesidad.</p><p id="65a240cc-8002-4b54-bf4f-7679e0d2a480" class="">Diseño de propuesta.</p><p id="b35a60d1-029f-47c3-96a1-8210046a8b49" class="">Solución y cierre.</p><p id="fa0cac3b-81de-4f72-90f6-fd7e4a3e1e1b" class="">Entrega de póliza.</p><p id="8ebcf5e0-2b2e-495a-860e-736d695bd09f" class="">Obtención de referidos.</p><p id="e5e7ba91-d5f6-44fa-957a-05a9e9bb822b" class="">Luis Arriola, director general, quiere saber el volumen de ventas de cada ramo por meses/trimestres. Que se almacenen de varios años. Con gráficas e indicadores.</p><p id="4f145fb4-7297-4c9c-a670-6f2ba67e9367" class="">Tienen campañas internas de seminarios como parte de incentivos, cambian por trimestre y son dinámicas. Tienen una lista de tasks para que puedas obtener el incentivo.</p><p id="11f60259-1b1e-413b-b043-6ca718ceb961" class="">PAI no es tán dinámico y sólo se ajusta a la inflación, pero es complejo y tiene muchos cálculos según el tipo de seguro que se venda y según el nivel que tengan los agentes. Los noveles tienen bonos extras. Hay bonos por bonos. Docs de bonos:</p><p id="a069c52e-3260-4d1c-a3f9-c527a60d5818" class=""><a href="https://drive.google.com/file/d/1sn_0Wjnb1UwdYtJ9OyfPmvab8HwggHjz/view?usp=share_link">Noveles</a></p><p id="0a244777-a4d4-4aef-b1d4-166160ed0dcb" class=""><a href="https://drive.google.com/file/d/10mSOACG3YK6FO_aK2ptTdekquTIMKCEX/view?usp=share_link">Consolidados</a></p><p id="1e224d87-6496-4afc-b884-7575ebdde6b2" class="">Existen congresos que te dan incentivos por productividad.</p><p id="aa8e911e-9aac-4843-b1a0-f0c5768bcb21" class="">El ramo de vida tiene su esquema de bonos incluso más complejo.</p><p id="0cc704d3-b315-493d-ad97-68d976ed46e5" class="">Laura (Gerente de seguros de Vida) tiene el excel de bonos de vida.</p><p id="4e66b9f7-cc96-4dd5-b391-4f3b78251f80" class="">Hay dos tipos de cédulas, entonces si no tienes la B no puedes vender PYMES.</p><h2 id="644c5dc3-69d3-4794-8da5-63a4ad487898" class=""><strong>Dudas de infraestructura:</strong></h2><p id="ccf2c9f7-dcf1-4c1e-a400-2f7ad534be22" class="">Usuarios: nuevos agentes, staff de RAM, agentes con más antigüedad (actualmente alrededor de 150 personas pero quieren crecer el doble dentro de 5 años).</p><p id="5b1ce07f-7d44-4680-a705-e329b8a7b3ba" class="">Horarios: a cualquier hora.</p><p id="068bcfbc-51c0-4bed-881d-e77970cbb915" class="">Equipos: cuentan con teléfonos y computadora de relativa buena capacidad.</p></div></article></body></html>

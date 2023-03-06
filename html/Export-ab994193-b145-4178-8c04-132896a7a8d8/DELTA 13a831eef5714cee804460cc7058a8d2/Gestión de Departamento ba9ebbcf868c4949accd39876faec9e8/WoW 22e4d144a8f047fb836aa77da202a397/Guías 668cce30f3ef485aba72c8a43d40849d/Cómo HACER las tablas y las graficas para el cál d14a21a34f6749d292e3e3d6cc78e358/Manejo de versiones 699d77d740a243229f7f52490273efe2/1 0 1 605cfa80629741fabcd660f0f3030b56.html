@@ -1,0 +1,692 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>1.0.1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="605cfa80-6297-41fa-bcd6-60f0f3030b56" class="page sans"><header><h1 class="page-title">1.0.1</h1></header><div class="page-body"><h3 id="af70922b-6a0b-4e8a-8731-46fe88be6668" class="">Documentos relacionados.</h3><table id="f588b728-dadc-46b9-b96b-3381cf21a50e" class="simple-table"><tbody><tr id="aa17e32f-6c01-4b26-b462-29a81dbe514b"><td id="{:Eg" class="">Guía para llenar tablas de calendario</td><td id="^Z:M" class="">TO DO</td></tr><tr id="351bea0d-2061-4ab3-99ba-c76d0b18846d"><td id="{:Eg" class="">Proceso de las graficas</td><td id="^Z:M" class="">TO DO</td></tr><tr id="037faddc-5785-4df4-8962-ee2093d000b9"><td id="{:Eg" class="">Proceso de las gestión de métricas</td><td id="^Z:M" class="">TO DO</td></tr></tbody></table><h1 id="401ec114-ac23-4d50-8518-6acf73242a1b" class="">Editando las tablas de calendario</h1><ol type="1" id="2165b02e-f78d-4b2d-83d4-200f10953243" class="numbered-list" start="1"><li>Primero tenemos que agregar las columnas que nos ayudaran a hacer las gráficas y dichos cálculos para el SPI y CPI<figure id="3d9f3719-93e0-401b-aba3-1347dd25ff8c" class="image"><a href="../Untitled.png"><img style="width:975px" src="../Untitled.png"/></a></figure></li></ol><p id="a2f2b5e2-a986-4fc8-8b74-a91e01062be1" class="">
+</p><ol type="1" id="296dd497-fea4-4dc8-a887-48b2077b265d" class="numbered-list" start="2"><li>Una vez que agregamos dichas columnas haremos las configuraciones necesarias para que estas no edite de manera negativa los cálculos que anteriormente ya se hicieron.<ol type="a" id="7dd71df3-be60-40de-ba2b-10983bbebce5" class="numbered-list" start="1"><li>Un ejemplo podrías ser la barra de trabajo que se tiene por cada semana.<figure id="d378a927-c851-40b9-b96a-8c5b97bfc9ee" class="image"><a href="../Untitled%201.png"><img style="width:808px" src="../Untitled%201.png"/></a></figure></li></ol><ol type="a" id="50b61a68-bcdc-4673-8f85-8f90013885b9" class="numbered-list" start="2"><li>Otro ejemplo son los aspectos condicionales de cada celda. En la siguiente imagen podemos ver que la columna de “real time” tiene varios colores<figure id="ace898af-b04e-4937-929b-8d1e83ea58b3" class="image"><a href="../Untitled%202.png"><img style="width:820px" src="../Untitled%202.png"/></a></figure><p id="02ea70cb-36c2-45a6-9e8a-cf0629cc3465" class="">Esto se debe porque previamente se establecieron condiciones.</p><h2 id="8aebab9b-c84c-4d4b-9b09-5849830150e3" class="">Editando formato condicional</h2><p id="ef5e6749-e64b-43f3-a839-517339ee2a65" class="">Para poder editar estas configuraciones primero debes posicionarte en alguna celda donde se encuentre este formato y después hacer lo siguiente</p><figure id="02f97403-fd14-483d-b757-2dd70122e4b8" class="image"><a href="../Untitled%203.png"><img style="width:825px" src="../Untitled%203.png"/></a></figure><p id="c939b763-c76e-41a1-b59a-6a008f233151" class="">
+</p><p id="d69bb984-a65b-4d9a-b7c1-155b84229828" class="">Se deberá ver de la siguiente manera:</p><figure id="6e6e2b84-c01a-4b26-8997-99d1da811a58" class="image"><a href="../Untitled%204.png"><img style="width:891px" src="../Untitled%204.png"/></a></figure><p id="5752be9b-02ac-4a93-bfec-97ba5312098a" class="">Una vez aquí ya podremos crear algún aspecto condicional o editar los que ya existen.</p><p id="68048efa-f049-4d49-a5ee-de695c3fbebe" class=""><em>NOTA: Para ver si una celda tiene o no tiene formato condicional se deberá ver de la siguiente manera:</em></p><figure id="69321fea-9f8b-446d-8899-4eb0049e551f" class="image"><a href="../Untitled%205.png"><img style="width:848px" src="../Untitled%205.png"/></a></figure><p id="681878fe-375e-4e08-b18a-687564054697" class=""><em>Aquí vemos como se seleccionó una celda donde no existe dicho formato condicional y en nuestra ventana de “Reglas de formato condicional” observamos que no hay ninguno.</em></p></li></ol></li></ol><p id="2a1dcd23-fc84-45f6-b920-08eb4e4eb953" class="">
+</p><ol type="1" id="db193263-44d8-4562-a96f-44d0f0fa63da" class="numbered-list" start="3"><li>Comúnmente las columnas de las fechas no tienen un formato establecido tipo “Fecha”, por lo tanto, debemos de hacerlo. Seleccionamos la columna que queremos que tenga este formato y hacemos lo siguiente:<p id="2cfaf17c-ca96-4973-98d9-9a8924aeaeab" class=""><em>NOTA: No se preocupen si en esta tabla no ven el “Real AP`s”, se me fue ponerlo aquí, pero ustedes </em><strong><em>SI </em></strong><em>deberían tenerlo.</em></p><figure id="cf52d9d3-7dee-48b7-b411-0c9901066943" class="image"><a href="../Untitled%206.png"><img style="width:975px" src="../Untitled%206.png"/></a></figure><p id="a5494d6a-3437-40d5-ad29-0cd01071d976" class="">
+</p></li></ol><ol type="1" id="e7f40020-541d-4d5c-a2c1-4452dc32e3ab" class="numbered-list" start="4"><li>Después arreglaremos las fechas, ya que el equipo DELTA esta acostumbrado a escribir las fechas de la siguiente manera.<h3 id="942e5977-292d-4a91-90eb-cda9775184ad" class="">                                                    mes/día/año</h3><p id="0c9a00b2-ed70-4a58-a829-98b16abaec79" class="">Y nosotros la necesitamos de la siguiente manera, para que las graficas tomen ese dato como fecha y no como un dato cualquiera.</p><h3 id="0cf55a4f-2807-491e-80fd-9432987e2cc5" class="">                                                    día/mes/año</h3><p id="41d0bace-2759-4bc6-8abd-00132b403384" class="">
+</p></li></ol><ol type="1" id="cfb116ad-b87e-4ccb-af32-995298961fbb" class="numbered-list" start="5"><li>Ahora llenaremos las columnas “Estimated Value” y “Real value”.<ol type="a" id="7bcd8fca-baee-4ca5-be1e-94bc7fabc029" class="numbered-list" start="1"><li>En el caso “Estimated Value” únicamente llenaremos esa columna con 1`s</li></ol><ol type="a" id="556856ae-db6e-4192-a25a-405fd45f6cdf" class="numbered-list" start="2"><li>En el caso de “Real value” pondremos una condición que diga “Si la tarea ya está completada entonces que se escriba 1, de lo contrario que se escriba 0”<p id="b0a1c186-429a-4093-ab82-c3b20009c565" class=""><em>NOTA: No se preocupen si en esta tabla no ven el “Real AP`s”, se me fue ponerlo aquí, pero ustedes </em><strong><em>SI </em></strong><em>deberían tenerlo.</em></p></li></ol><figure id="c4334494-a2a3-49d1-8330-3879c0034b32" class="image"><a href="../Untitled%207.png"><img style="width:919px" src="../Untitled%207.png"/></a></figure><p id="00550319-d672-48dc-953c-97631ceb3777" class="">
+</p></li></ol><h1 id="9e43c8af-8de4-42e6-bd04-39a62dd8352b" class="">Tablas dinámicas</h1><ol type="1" id="ead7f00d-1a69-43a4-a102-29de6725f700" class="numbered-list" start="1"><li>Para hacer las graficas necesitaremos crear tablas dinámicas.<figure id="9c413030-fc37-4708-8f3a-a6b2626bb961" class="image"><a href="../Untitled%208.png"><img style="width:975px" src="../Untitled%208.png"/></a></figure></li></ol><p id="aa4251fa-e97c-44f1-a3f4-4b61f517e350" class="">
+</p><ol type="1" id="a1038154-c5c0-43c7-8eea-3b10ca4be707" class="numbered-list" start="2"><li>Nos pedirá seleccionar los intervalos de datos. Aquí seleccionaremos nuestra tabla, desde los títulos de las columnas hasta el último dato que tengamos.<figure id="1e4939f8-18df-4c87-bbbc-10f88b820e10" class="image"><a href="../Untitled%209.png"><img style="width:975px" src="../Untitled%209.png"/></a></figure></li></ol><p id="8ceff81b-55b1-44dc-aa01-66be70f492f0" class="">
+</p><ol type="1" id="b80718a7-6b75-4ac1-9027-670269a2f097" class="numbered-list" start="3"><li>Por último le picaremos a insertar a nueva hoja para que no nos estorben nuestras tablas dinámicas.<figure id="c726a0b5-a314-4de2-b814-344488949950" class="image"><a href="../Untitled%2010.png"><img style="width:975px" src="../Untitled%2010.png"/></a></figure></li></ol><p id="01bcf160-803d-4863-b7db-0ce7d5c04caa" class="">
+</p><ol type="1" id="81c153a3-1992-4e25-a57a-b63372bc992e" class="numbered-list" start="4"><li>En nuestra hoja nueva seleccionaremos las filas y los valores en el “Editor de tablas dinámicas”.<figure id="87154542-5c76-4093-a088-9bbb5099c118" class="image"><a href="../Untitled%2011.png"><img style="width:893px" src="../Untitled%2011.png"/></a></figure><ol type="a" id="f7a9b0a3-2612-45ff-8bc2-6e79360b1021" class="numbered-list" start="1"><li>Aquí nos deberá quedar este apartado de la siguiente manera<figure id="22c521e1-eb7b-4e26-8caf-41d3ff872237" class="image"><a href="../Untitled%2012.png"><img style="width:892px" src="../Untitled%2012.png"/></a></figure></li></ol><ol type="a" id="402fac84-9a27-439c-add0-28e0b96872f8" class="numbered-list" start="2"><li>Ahora haremos una columna (Aps acumulados) que ayudará a realizar las gráficas.<ol type="i" id="92ccc0a1-deb1-4761-a1ee-791ad1264a0c" class="numbered-list" start="1"><li>El primer valor valdrá lo mismo que el valor de la izquierda</li></ol><ol type="i" id="0eee5f7a-2090-4016-bcb7-5e63e57fb37f" class="numbered-list" start="2"><li>Del segundo en adelante tendrá el valor de [celda arriba + celda izquierda]<figure id="4cf91e98-b627-4f93-9387-29486f62c4fc" class="image"><a href="../Untitled%2013.png"><img style="width:739px" src="../Untitled%2013.png"/></a></figure><p id="1b844447-0460-4452-8638-5d2269a9925d" class=""><em>N0TA: LA CANTIDAD DE CELDAS QUE ARRASTRARAS PARA CALCULAR ESTA COLUMNA DEPENDERA DE LA CANTIDAD DE FECHAS QUE SE PONGAN. En este caso baje hasta la fila 11 porque sé que no habrá tantas fechas, pues yo estaré manejando estas graficas por semanal y el rango de extension de tiempo puede ser mínimo.</em></p></li></ol></li></ol></li></ol><ol type="1" id="07a02d66-a9ab-48ae-b7ca-726819427e86" class="numbered-list" start="5"><li>Repetiremos este proceso 3 veces más, con la parte de “Real AP`s”, “Duration(hrs)” y “Real time”. Recomiendo que estas tablas las dejemos en una misma hoja; para eso seleccionaremos la siguiente opción al momento de configurar la tabla dinámica.<figure id="d219ad7d-6f70-4ad8-9d31-40b541fc934d" class="image"><a href="../Untitled%2014.png"><img style="width:975px" src="../Untitled%2014.png"/></a></figure><p id="7b4534fb-71d4-4e67-b87f-2752d1e618b5" class="">
+</p><p id="8119cf47-6315-405c-a091-45ab08a3591c" class="">Finalmente, estas serían las tablas que tendríamos.</p><figure id="73fb5282-dc4f-4369-8b79-064c04787345" class="image"><a href="../Untitled%2015.png"><img style="width:756px" src="../Untitled%2015.png"/></a></figure><figure id="59406296-8b21-4154-9f53-39b9bd227ad1" class="image"><a href="../Untitled%2016.png"><img style="width:345px" src="../Untitled%2016.png"/></a></figure></li></ol><h1 id="cdc58d44-3fe5-4b08-8fdd-5cffcabf2b77" class="">Graficas</h1><p id="f3d21b11-e074-4cb3-a1ee-45ce53e8cb74" class="">
+</p><ol type="1" id="ff1be343-daf0-44c6-915a-dff0b643c1de" class="numbered-list" start="1"><li>Para hacer las graficas tendremos que seleccionar lo siguiente.</li></ol><figure id="fc9b64cc-7c2f-4b35-9c11-5b28c0d69629" class="image"><a href="../Untitled%2017.png"><img style="width:823px" src="../Untitled%2017.png"/></a></figure><p id="41397d2d-842c-41f6-a13f-97cd24949b75" class="">
+</p><ol type="1" id="f4fa284d-0dfe-4384-9792-a0c27e75e7cf" class="numbered-list" start="2"><li>Se mostrara una ventana y aquí seleccionaremos los intervalos.<figure id="d802bbc8-338e-4817-aeb2-4fff5c10f3cf" class="image"><a href="../Untitled%2018.png"><img style="width:975px" src="../Untitled%2018.png"/></a></figure><ol type="a" id="ad3dbd0a-cc6d-4834-a1d4-0903a55e4077" class="numbered-list" start="1"><li>Serían 3 intervalos, “APs acumulados”, “Real APs acum” y “End”. De cada uno de los intervalos se seleccionarán un mínimo de 10 celdas; esto por si los datos estimados llegan a extenderse más en fechas.<figure id="33e9ac1e-c71f-4cea-8012-9ec9ec4d0fe7" class="image"><a href="../Untitled%2019.png"><img style="width:782px" src="../Untitled%2019.png"/></a></figure><figure id="5da3db84-ce1f-4194-9302-54a0024ec450" class="image"><a href="../Untitled%2020.png"><img style="width:779px" src="../Untitled%2020.png"/></a></figure><figure id="36ed32a7-0d51-41db-ba39-8c64a3bcbb47" class="image"><a href="../Untitled%2021.png"><img style="width:781px" src="../Untitled%2021.png"/></a></figure></li></ol></li></ol><p id="4bdc4f0a-54d5-446b-a58b-8385ef6cca78" class="">
+</p><ol type="1" id="6ab05c36-688f-46e4-87c8-02f0b5b8ed5a" class="numbered-list" start="3"><li>Ahora copiaremos la siguiente configuración de la gráfica.<figure id="62fefbc3-e0b3-40eb-8869-ee7e660056aa" class="image"><a href="../Untitled%2022.png"><img style="width:683px" src="../Untitled%2022.png"/></a></figure><p id="fa81a625-417b-4d2d-aa95-022bf4455a93" class="">
+</p></li></ol><ol type="1" id="a30dd8f4-3a39-466f-aca3-40558ba59bb7" class="numbered-list" start="4"><li>Lo siguiente será personalizar nuestra grafica. Deberán tomar en cuenta las siguientes personalizaciones.</li></ol><p id="66dd217c-b309-4f0d-ad3b-6730a1f4a626" class=""><div class="indented"><ol type="a" id="0345ad46-687e-452d-a03c-b700d67291d8" class="numbered-list" start="1"><li>Primero le pondremos un título a nuestra grafica<figure id="323e527c-3070-4fe9-9968-2dbf042fa3cc" class="image"><a href="../Untitled%2023.png"><img style="width:918px" src="../Untitled%2023.png"/></a></figure><p id="4ab05eff-9702-4a00-8dbb-54e95520cce5" class="">
+</p></li></ol><ol type="a" id="c3fccd78-f2d3-4f60-bb6f-554b4455a9e4" class="numbered-list" start="2"><li>Después estableceremos un diseño (en la sección de “Serie”) de la gráfica para poder entender nuestros datos más fácilmente.<figure id="2b8552c8-d41c-45e5-93a6-7d3a21a97727" class="image"><a href="../Untitled%2024.png"><img style="width:777px" src="../Untitled%2024.png"/></a></figure><p id="19b65f55-19c9-4b2b-b451-bd67c69f5932" class="">
+</p></li></ol><ol type="a" id="2450d57b-924c-46f5-b074-b0f1e418cb1e" class="numbered-list" start="3"><li>Por último editaremos el “El eje vertical” de la siguiente manera.<figure id="7bfdbfd0-bb4d-4d8f-acee-32671b237bdb" class="image"><a href="../Untitled%2025.png"><img style="width:817px" src="../Untitled%2025.png"/></a></figure><p id="98ef2f3b-3bd7-4104-a708-3cf7a670227b" class="">
+</p></li></ol></div></p><ol type="1" id="7c4fa8a7-b0bf-429f-a2e2-8489eef8dad3" class="numbered-list" start="5"><li>Para finalizar, haremos la segunda gráfica. Replicaremos los pasos desde el <strong>paso 1, </strong>pero ahora seleccionaremos los siguientes 3 intervalos, “Horas estimadas”, “Horas reales” y “End”. Es necesario recordar que se deben seleccionar un mínimo de 10 celdas por si crecen las fechas de entrega.<p id="25a2f034-2ccf-4bf4-8b21-350fe3672649" class="">Quedaría de la siguiente manera.</p><figure id="4474aa59-04ed-46ed-8c87-efedc08f7e42" class="image"><a href="../Untitled%2026.png"><img style="width:938px" src="../Untitled%2026.png"/></a></figure><p id="7113890c-893a-4072-9738-261340332eed" class="">                                               <strong>¡¡FELICIDADES, YA TIENEN SUS GRAFICAS!!</strong></p><p id="f6e933b6-4996-49ba-9c0b-6b56fefe00a4" class="">                                                         <strong>Ahora toca hacer el SPI y CPI</strong></p><p id="ed3d6746-406d-42c7-9e53-0532e95ccd7f" class="">
+</p></li></ol><h1 id="f7f6f726-4a17-4974-a16b-f18b6c78501e" class="">SPI y CPI</h1><ol type="1" id="0242e2be-08aa-4dd1-9479-fd24e428e01e" class="numbered-list" start="1"><li>Para empezar debemos de copiar esta plantilla a lado de nuestra tabla.<figure id="a1983ab7-b2a9-4420-8666-b86cfbf3ca09" class="image"><a href="../Untitled%2027.png"><img style="width:858px" src="../Untitled%2027.png"/></a></figure><p id="69b43611-075e-4687-b6c8-3dfd6a96ff64" class="">
+</p></li></ol><ol type="1" id="ec76775a-3bdd-45c4-ab35-78c02c875ed7" class="numbered-list" start="2"><li>Necesitaremos establecer los totales en las columnas “Real APs”, “Estimated value” y “Real value”.<figure id="1b205b63-6d80-4d9c-9fc5-6b44c80a628a" class="image"><a href="../Untitled%2028.png"><img style="width:914px" src="../Untitled%2028.png"/></a></figure><p id="03650070-41ce-45d8-b643-b08e0fc6132a" class="">
+</p></li></ol><ol type="1" id="e2e17050-5b2c-4ea6-8177-0e5f2928a385" class="numbered-list" start="3"><li>Finalmente, tendremos que llenar la tabla de la siguiente manera.<figure id="efde841d-896b-4b67-a537-903d4e6541fe" class="image"><a href="../Untitled%2029.png"><img style="width:807px" src="../Untitled%2029.png"/></a></figure><p id="1acd2c0a-650e-43eb-88b8-7e26bfe133b9" class="">
+</p><p id="dc42fa1d-7f6a-4c83-8fcb-1d14e9fb8e03" class="">                                            <strong>¡¡FELICIDADES YA TIENES LOS CALCULOS SPI Y CPI!!</strong></p></li></ol><p id="37aa73af-eb70-468a-aeeb-0671c80d3abe" class="">
+</p><p id="b2733fdd-7bc8-4ddf-9bbd-c7a19d588879" class="">
+</p></div></article></body></html>

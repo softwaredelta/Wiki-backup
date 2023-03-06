@@ -1,0 +1,65 @@
+﻿Name,Assign,Description,Proyecto,Status,Tags,Tipo de Producto,URL
+Pain/Gain Map,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza, Fabián Enrique Avilés Cortés, Ricardo Nuñez Alanis, Cristian Rico, Emiliano Vásquez Olea, Andres, Olivia Araceli Morales Quezada",Mapa con el propósito de identificar los puntos negativos de su proceso actual para cada tipo de usuario y análisis de como la solución elimina dichos puntos y genera valor.,Deltalin,Done,Maps,,
+Impact Mapping,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza, Fabián Enrique Avilés Cortés, Ricardo Nuñez Alanis, Cristian Rico, Emiliano Vásquez Olea, Andres, Olivia Araceli Morales Quezada","El Impact Mapping nos permite analizar quiénes son los actores involucrados en la necesidad, qué acciones llevan a cabo y nosotros como equipo de desarrollo establecemos un objetivo y los puntos a “atacar”.",Deltalin,Done,Maps,,
+Módulos,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza, Fabián Enrique Avilés Cortés, Ricardo Nuñez Alanis, Cristian Rico, Emiliano Vásquez Olea, Andres, Olivia Araceli Morales Quezada","Módulos a desarrollar que buscan solventar la necesidad del cliente. También se incluye un MoSCoW Chart, primera priorización de módulos, alcance y el MVP",Deltalin,Review,Maps,,
+Diagrama de Arquitectura,Emiliano Vásquez Olea,"Propuestas actuales de tecnologías a utilizar en el desarrollo del proyecto de Michelín. Aún se requieren más componentes.
+• Unity
+• React
+• Tailwind CSS
+• Fastify
+• mySQL 
+Control de Versiones:
+• GitHub
+• Plastic SCM???",Deltalin,Review,Maps,,
+Prototipo Web,"Arisbeth Aguirre Pontaza, Olivia Araceli Morales Quezada, Jorge Guerrero Díaz","Prototipo en Web, que cubre las pantallas de Login, Administracion de Usuarios y Puntos de Venta y Preguntas",Deltalin,Done,Diseños,,
+Prototipo Móvil,Ricardo Nuñez Alanis,"Propuestas del diseño movil en figma, donde se ven las patañas de log in, seleccion de recorrido, exterior, interior y partes del cuestionario",Deltalin,Done,Diseños,,
+SPRINTS,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza",,Deltalin,Not started,,,
+MER,"Emiliano Vásquez Olea, Ricardo Nuñez Alanis, Andres, Fabián Enrique Avilés Cortés, Cristian Rico",,Deltalin,Review,,,
+Definición de CU (Story),,,Deltalin,Review,Docs,,
+Diccionario de Datos,"Cristian Rico, Andres, Fabián Enrique Avilés Cortés",,Deltalin,Not started,,,
+Propuesta para el Systems Engineering Management Plan,"Monica Ayala, Olivia Araceli Morales Quezada",Propuesta para el SEMP,Departamento,Not started,Maps,Process Map,
+Calendario en Google Sheets,"Monica Ayala, Olivia Araceli Morales Quezada",Planeación en Google Sheets,Departamento,Not started,Gestión,Planeación Calendario,https://docs.google.com/spreadsheets/u/1/d/1HZrmGn_cKk6wFRo-s0_ZsMpfMxow5rXOvBgHTPeQA0U/edit#gid=27041093
+Manual de arquitectura,Emiliano Vásquez Olea,Ubicado en principal de Michelin,Deltalin,Not started,,,
+1 on 1’s Equipo RAM,Jordana Betancourt Menchaca,Recopilación de reuniones 1 on 1 con integrantes del equipo RAM,RAM,In progress,Misc,,https://drive.google.com/drive/folders/1Y1ITPlNCyEh2CmbakeYV2j_pXJZhPUhQ?usp=sharing
+Habilidades de Integrantes,"Jordana Betancourt Menchaca, Reno, Ian García González, Ana Karen López Baltazar, José Ángel Rico Mendieta, Alejandro Mtz. Luna, Fermín Méndez García, Rodrigo Muñoz Guerrero, Erick Alfredo García Huerta, Diego Emilio Barrera Hernández, Kenny Eduard Vercaemer González",Captura de habilidades de integrantes del equipo RAM,RAM,In progress,Misc,Skill Map,https://docs.google.com/spreadsheets/d/1xFHs5PX02kNhiRXNv3LuX5OtFi42sEvD95QB9KKQmcI/edit?usp=sharing
+Reglas de Negocio Grupo RAM,"Rodrigo Muñoz Guerrero, Alejandro Mtz. Luna",Descripción de reglas de negocio para productos de Grupo RAM,RAM,Review,Fase: Análisis,Reglas de Negocio,
+Knowledge Base para Grupo RAM,"Monica Ayala, Rodrigo Muñoz Guerrero, Fermín Méndez García",Este documento debe documentar todo el <<conocimiento>> que tenemos acerca del negocio y las necesidades. A partir de este documento se generan propuestas e ideas para productos.,RAM,In progress,Fase: Análisis,Knowledge Base,
+Mapa de Procesos Departamentales,Kenny Eduard Vercaemer González,Mapa de todos los procesos y entregables del departamento.,Departamento,In progress,Procesos,Process Map,https://lucid.app/lucidchart/373af610-b2e9-4416-9e50-a29e3a89663b/edit?viewport_loc=77%2C69%2C3028%2C1381%2C0_0&invitationId=inv_9a4f5168-6af8-4270-9231-4ed5697f7f01
+Brainstorm para acuerdos de trabajo,Monica Ayala,Figma con ideas para acuerdos de trabajo,Departamento,Done,Links,Figjam teamwork templates,https://www.figma.com/file/Fc4oQqmy2sco7dFfveXxvM/Acuerdos-de-Equipo?node-id=0%3A1&t=7g6Nru8mLOI16bHb-0
+"Formato de propuesta de proyecto ","Monica Ayala, Ana Karen López Baltazar, Cristian Rico",Formato para firma,Departamento,Done,"Fase: Diseño, Formatos",Acta Constitutiva,https://docs.google.com/document/d/1WX7Qjw_0gBny_YWh7UCPXqg91zRrsRarmCxlyuOPuN4/edit
+Diseño de Figma,"Jordana Betancourt Menchaca, Ana Karen López Baltazar, Alejandro Mtz. Luna","Prototipo visual inicial ",RAM,Done,"Diseños, Fase: Diseño, Links",UI Design in Figma,https://www.figma.com/file/bBoLNzlrideevYMrwQ18vl/Prototipo-RAM?node-id=0%3A1&t=m2YNhsKIyBLRAMXG-0
+Formato Validación de Propuesta,"Rodrigo Muñoz Guerrero, Monica Ayala",Formato para firma de validación de propuesta,RAM,Done,Fase: Diseño,Formato,https://docs.google.com/document/d/1wx5LKQJvUJMOdyQ2ChuB9vqvR2xJOc_bIbPTxnhueHc/edit
+Formato Requisitos Funcionales,"Mónica Andrea Ayala Marrero, Rodrigo Muñoz Guerrero, Jordana Betancourt Menchaca",Especificación de formato para requisitos funcionales de Grupo RAM,RAM,Done,Fase: Diseño,Formato,https://docs.google.com/spreadsheets/d/1ijuDjWE1UxtgRoeekSNPiPbB5AByjpyzYiSnwvLzQ4Q/edit?usp=sharing
+"Brainstorm solución de ventas, negocios, PAI, bonos, etc. Grupo RAM","Rodrigo Muñoz Guerrero, Fermín Méndez García",,RAM,Done,Fase: Análisis,Brainstorm,
+Definición de Alcance,"Rodrigo Muñoz Guerrero, Kenny Eduard Vercaemer González",Este documento define el alcance de un proyecto sin una especificación de requerimientos detallada. Permite establecer un acuerdo inicial con el cliente para comenzar a trabajar en el diseño.,RAM,Done,Fase: Análisis,Definición de Alcance,
+Resumen de Reuniones RAM para Análisis,"Monica Ayala, Rodrigo Muñoz Guerrero, Fermín Méndez García",Resumen de información de negocio obtenida en reuniones con Grupo RAM,RAM,Done,Fase: Análisis,Business Knowledge,https://drive.google.com/drive/u/1/folders/1fAwsB1_l0sCynAklk9ZsymYF6MaQq9er
+Diseño Prototipo en Figma para Página Web RAM,Jorge Guerrero Díaz,Prototipo de página web en figma para solución de Grupo RAM,RAM,Done,Fase: Diseño,UI Design in Figma,https://www.figma.com/file/bBoLNzlrideevYMrwQ18vl/Prototipo-RAM?node-id=0%3A1&t=m2YNhsKIyBLRAMXG-0
+Repositorio de Código (monorepo),"Kenny Eduard Vercaemer González, Ian García González",Repositorio en GitHub para gestión de todo código para solución de Grupo RAM,RAM,Done,Fase: Construcción,Repositorio,https://github.com/softwaredelta/GNP
+Impact Mapping para Solución,Rodrigo Muñoz Guerrero,Figma dónde se realizó proceso de impact mapping para identificar soluciones,RAM,Done,Fase: Análisis,Impact Mapping,https://www.figma.com/file/84B4nmkuIgJskXHJhHZYt8/IMPACT-MAPPING-RAM?node-id=0%3A1&t=cc8EgTWwzmk6Nant-0
+Requerimientos no Funcionales,"Kenny Eduard Vercaemer González, Rodrigo Muñoz Guerrero, Jordana Betancourt Menchaca, Reno","Especificación de requerimientos no funcionales para solución de Grupo RAM. Incluye rendimiento, compatibilidad, usabilidad, etc.",RAM,Done,Fase: Diseño,NFR Spec,
+Diagramas de Arquitectura,"Kenny Eduard Vercaemer González, Ian García González, Jordana Betancourt Menchaca",Diagramas de arquitectura. Se describe la arquitectura general del sistema. Se describe la arquitectura de load balancing del backend.,RAM,Done,Fase: Diseño,Architecture Diagram,https://lucid.app/lucidchart/2831c9cf-5829-4b57-a78b-8b52a0d55129/edit?viewport_loc=-129%2C-20%2C3002%2C1370%2C0_0&invitationId=inv_3b5bd7af-1389-4270-b097-fd9d7fdeda29
+Repositorio de código para solución de Michelin,,,Deltalin,Done,"External, Gestión",,https://github.com/softwaredelta/Michelin
+Historias de Usuario,"Rodrigo Muñoz Guerrero, Jordana Betancourt Menchaca, Fermín Méndez García, Kenny Eduard Vercaemer González",Especificación de historias de usuario para Grupo RAM,RAM,Review,Fase: Diseño,Historias de Usuario,https://docs.google.com/spreadsheets/d/1ijuDjWE1UxtgRoeekSNPiPbB5AByjpyzYiSnwvLzQ4Q/edit?usp=share_link
+Objetivos Semanales,"Jordana Betancourt Menchaca, Rodrigo Muñoz Guerrero, Reno, Ana Karen López Baltazar, Alejandro Mtz. Luna, Erick Alfredo García Huerta, Ian García González, José Ángel Rico Mendieta, Fermín Méndez García, Diego Emilio Barrera Hernández",Write a useful description of the item,RAM,Ongoing,Misc,Objetivos Semanales,https://www.figma.com/file/NpoL0YUsxMnNUHW6PElikS/Objetivos-semanales?node-id=0%3A1&t=xPtoBviW8FUp8o0r-1
+Formato para procesos,"Monica Ayala, Kenny Eduard Vercaemer González",Formato para la estandarización de procesos,Departamento,Done,"Formatos, Procesos",,
+,,,RAM,Review,,,
+Guía de Notion Departamental,"Kenny Eduard Vercaemer González, Ana Karen López Baltazar",Guía para principiantes del Notion Departamental,Departamento,In progress,,Guía,
+Revisar presupuesto para pruebas de arquitectura,"Kenny Eduard Vercaemer González, Rodrigo Muñoz Guerrero",Confirmar si se tiene presupuesto para ejecutar pruebas de arquitectura verdaderas con la infraestructura real,RAM,Not started,,,
+Diagramas de Despliegue,Kenny Eduard Vercaemer González,Especificación de proceso de despliegue para solución Grupo RAM,RAM,Not started,,,
+,Kenny Eduard Vercaemer González,,,Not started,,,
+Guía de Configuración de Ambiente de Desarrollo,"Kenny Eduard Vercaemer González, Jordana Betancourt Menchaca",Manual de miembro de departamento; cómo configurar el ambiente de desarrollo para solución Grupo RAM,RAM,Not started,,,
+Planear Presentación Cierre de Etapa,"Olivia Araceli Morales Quezada, Mónica Andrea Ayala Marrero",Planear la presentación para el cierre de la primera etapa.,Departamento,Ongoing,"Docs, Fase: Análisis",Presentación,
+Acuerdo del Uso de Espacios,Olivia Araceli Morales Quezada,Tener una negociación con los PMs del otro departamento para llegar un acuerdo sobre el uso del Salón 2001.,Departamento,Ongoing,"Acuerdos, External",,
+Compromiso Horas a trabajar en proyecto,Jordana Betancourt Menchaca,Write a useful description of the item,RAM,Review,Gestión,,
+Procesos de Mejora Continua y Seguimiento,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza","PMC del CMMI ",Deltalin,In progress,"Formatos, Procesos",,
+Modelo Entidad-Relación,"Alejandro Mtz. Luna, José Ángel Rico Mendieta, Emiliano Vásquez Olea, Reno, Rodrigo Muñoz Guerrero",Diseño del Modelo Entidad Relación del proyecto,RAM,In progress,Fase: Diseño,MER,"https://excalidraw.com/#room=51eda3dc6b0eb41332c2,9axsS7Sh7PTaIJ1rykVK7Q"
+Matriz Trazabilidad,"Andres, Cristian Rico",Write a useful description of the item,Deltalin,Not started,Docs,,
+Diseño de Componentes WEB,"Jorge Guerrero Díaz, Arisbeth Aguirre Pontaza",Write a useful description of the item,Deltalin,Not started,,,
+SCRIPT SQL,"Andres, Fabián Enrique Avilés Cortés",Write a useful description of the item,Deltalin,Not started,,,
+Diseño de Componentes Móvil,"Ricardo Nuñez Alanis, Fabián Enrique Avilés Cortés",Write a useful description of the item,Deltalin,Not started,,,
+Configuración Arquitectura,"Cristian Rico, Emiliano Vásquez Olea, Ricardo Nuñez Alanis",Write a useful description of the item,Deltalin,Not started,,,
+"Configuración de Github y Tecnologías ",Emiliano Vásquez Olea,Write a useful description of the item,Deltalin,In progress,,,
+Comité de ética,Olivia Araceli Morales Quezada,"Plantear y desarrollar las bases para consolidar un buen a,biete en el departa",,Ongoing,,,
+Módulo 7 RAM,"Jordana Betancourt Menchaca, Erick Alfredo García Huerta",,,In progress,,,
+Módulo 6 RAM,"Jordana Betancourt Menchaca, Kenny Eduard Vercaemer González",,,Not started,,,
+Módulo 10 RAM,"Jordana Betancourt Menchaca, Ian García González",,,Not started,,,
