@@ -1,5 +1,0 @@
-# Desplegar los activos de proceso de la organización e incorporar las experiencias
-
-Número de meta: 3
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Desplegar%20los%20activos%20de%20proceso%20de%20la%20organizacio%20867987ff82ef4d7dbca7527c67108082.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Desplegar%20los%20procesos%20esta%CC%81ndar%202067665b523c4278949895de1b895514.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Monitorizar%20la%20implementacio%CC%81n%2048c2c305409040bca71eccf04f7c05ab.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Incorporar%20las%20experiencias%20en%20los%20activos%20de%20proc%202ed57f39a66b408d8cda670393223cdf.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Enfoque%20en%20Procesos%20de%20la%20Orgnanizacio%CC%81n%204b83a0e6d3664c01845496697fa04969.md

@@ -1,6 +1,0 @@
-﻿Etapa,Actividades,CMMI
-Preparación,"Consultar el Google Sheets de requisitos funcionales correspondiente al proyecto (https://docs.google.com/spreadsheets/d/1ph59tFomRVLLrpiTu-S8Bv63cmgASZeHD05iDg7vyBs/edit#gid=0 o https://docs.google.com/spreadsheets/d/1Eme0YIj9GZCc3QCBQehDUGZIgS7aTilZx4oUy35dcGc/edit#gid=0). En caso de no haber Google Sheets, referirse inmediatamente a la guía  https://www.notion.so/638cc52e59414835b4bfce35adfa651c ",
-,"Identificar la historia de usuario en el Backlog cuyo progreso quiera saber o que se desee modificar. En caso de ser una nueva historia de usuario, agregarla teniendo en cuenta el control de cambios [link de proceso de cambios].",
-Documentación,Modificar o agregar la información de la HU en su lugar correspondiente. Seguir la guía   https://www.notion.so/638cc52e59414835b4bfce35adfa651c y la guía [link a definición de una HU y como diseñar/ejecutar pruebas] para mayor información.,
-Revisión,"Leer la información de la HU, verificar que todo esté en orden y ortográficamente correcto.",
-Monitorización,"Constantemente verificar que a medida que se actualiza el progreso de una HU, también se documente de manera consistente.",

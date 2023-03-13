@@ -1,3 +1,0 @@
-# Ejecución
-
-CMMI: MA

@@ -1,5 +1,0 @@
-# Alinear las actividades de medición y análisis
-
-Número de meta: 1
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20los%20objetivos%20de%20medicio%CC%81n%20053cc6a00a074056889edcaf3b2d4bac.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Especificar%20las%20medidas%20bd5a331b94914e32952a87c1a367d258.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Especificar%20los%20procedimientos%20de%20recogida%20y%20de%20al%208dd6d003fb964cfcb0b2299359adc96a.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Especificar%20los%20procedimientos%20de%20ana%CC%81lisis%20347bfd1427444f17962f6c84904d9584.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Medicio%CC%81n%20y%20Ana%CC%81lisis%20a20346de4ab7497d9b6418ed812c97ce.md

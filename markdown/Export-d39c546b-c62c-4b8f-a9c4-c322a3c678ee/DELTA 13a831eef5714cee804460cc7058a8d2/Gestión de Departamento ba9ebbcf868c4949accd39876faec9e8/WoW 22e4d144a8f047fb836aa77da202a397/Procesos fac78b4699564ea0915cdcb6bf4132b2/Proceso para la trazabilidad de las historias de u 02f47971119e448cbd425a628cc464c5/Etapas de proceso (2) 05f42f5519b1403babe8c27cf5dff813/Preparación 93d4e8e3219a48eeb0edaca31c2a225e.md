@@ -1,3 +1,0 @@
-# Preparación
-
-Actividades: Consultar el Google Sheets de requisitos funcionales correspondiente al proyecto (https://docs.google.com/spreadsheets/d/1ph59tFomRVLLrpiTu-S8Bv63cmgASZeHD05iDg7vyBs/edit#gid=0 o https://docs.google.com/spreadsheets/d/1Eme0YIj9GZCc3QCBQehDUGZIgS7aTilZx4oUy35dcGc/edit#gid=0). En caso de no haber Google Sheets, referirse inmediatamente a la guía  https://www.notion.so/638cc52e59414835b4bfce35adfa651c

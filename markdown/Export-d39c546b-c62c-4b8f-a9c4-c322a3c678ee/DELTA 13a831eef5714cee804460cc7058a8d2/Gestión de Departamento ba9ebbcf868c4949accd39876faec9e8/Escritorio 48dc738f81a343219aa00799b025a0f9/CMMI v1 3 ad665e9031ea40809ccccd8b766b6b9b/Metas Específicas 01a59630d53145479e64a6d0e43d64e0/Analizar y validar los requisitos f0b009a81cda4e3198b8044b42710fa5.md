@@ -1,5 +1,0 @@
-# Analizar y validar los requisitos
-
-Número de meta: 3
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20los%20conceptos%20y%20los%20escenarios%20de%20opera%20411953ba2ee445f997d3344de755e699.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20una%20definicio%CC%81n%20de%20la%20funcionalidad%20y%20d%20bd5bccf12865414f9cceebdf9ec53d77.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Validar%20los%20requisitos%20e1f38755c42e4367a4dfc49e890a53b6.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Analizar%20los%20requisitos%20283e56b6bc3c4dafa829e200ce6487f7.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Analizar%20los%20requisitos%20para%20conseguir%20un%20equilibr%20c7c45bd3787c492387ed302f6c638031.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Desarrollo%20de%20Requisitos%2020b29831aa74464482be4d49fddde7fd.md

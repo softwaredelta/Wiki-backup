@@ -1,5 +1,0 @@
-# Proporcionar los resultados de la medición
-
-Número de meta: 2
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Obtener%20los%20datos%20de%20la%20medicio%CC%81n%20fef8545a904145c3903f9ea07ec7b70c.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Analizar%20los%20datos%20de%20la%20medicio%CC%81n%209444d9f22b0f4f1f84cc002bb0d79f61.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Almacenar%20los%20datos%20y%20los%20resultados%20a8efb479c28b4f0bb3cb75650cd048a8.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Comunicar%20los%20resultados%202f522ccee3c649c8901fd3040b946d72.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Medicio%CC%81n%20y%20Ana%CC%81lisis%20a20346de4ab7497d9b6418ed812c97ce.md

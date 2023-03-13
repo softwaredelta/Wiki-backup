@@ -1,5 +1,0 @@
-# Seleccionar las mejoras
-
-Número de meta: 2
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Educir%20las%20sugerencias%20de%20mejora%205218e0a70c48432ba7798c6b665c8f10.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Analizar%20las%20sugerencias%20de%20mejora%20419e2b46245c4e4a95107dbfeec3bf52.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Validar%20las%20mejoras%20019a3dc6b54c43e0a84becaa3e3ef07c.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Seleccionar%20e%20implementar%20las%20mejoras%20para%20el%20desp%20bbd65c6ee78e4d0086162be3159278b7.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Gestio%CC%81n%20del%20Rendimiento%20de%20la%20Organizacio%CC%81n%201165d66f9cb147e193a68fe224299ffd.md

@@ -1,5 +1,0 @@
-# Establecer las estimaciones
-
-Número de meta: 1
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Estimar%20el%20alcance%20del%20proyecto%203c43f06dd283474fb50f29bd56c9dbc5.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20las%20estimaciones%20de%20los%20atributos%20de%20lo%2088221b61b73b4707905d363f9b92164a.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Definir%20las%20fases%20del%20ciclo%20de%20vida%20del%20proyecto%20948fabba18e1451a961757f5a16c0ca2.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Estimar%20el%20esfuerzo%20y%20el%20coste%2091f35a4023b74063b5e8995a2241a705.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Planificacio%CC%81n%20del%20Proyecto%206dba5b9a080c4ef0a4babec2ebb5d62f.md

@@ -1,3 +1,0 @@
-# Untitled
-
-Revisado: Needs Review

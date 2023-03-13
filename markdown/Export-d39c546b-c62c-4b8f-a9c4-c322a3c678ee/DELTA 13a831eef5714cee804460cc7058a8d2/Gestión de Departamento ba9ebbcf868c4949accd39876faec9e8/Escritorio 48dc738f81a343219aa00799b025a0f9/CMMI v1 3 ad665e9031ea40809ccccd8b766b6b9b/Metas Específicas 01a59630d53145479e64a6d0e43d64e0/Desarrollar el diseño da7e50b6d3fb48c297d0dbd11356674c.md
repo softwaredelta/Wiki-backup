@@ -1,5 +1,0 @@
-# Desarrollar el diseño
-
-Número de meta: 2
-Prácticas Específicas: ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Disen%CC%83ar%20el%20producto%20o%20los%20componentes%20de%20producto%20a7023e4e4aab4239a57799cd15186809.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Establecer%20un%20paquete%20de%20datos%20te%CC%81cnicos%20263c4378d15f46ab90e3536de7f40c1c.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Disen%CC%83ar%20las%20interfaces%20usando%20criterios%20512d2b37900d440ebebf0e7788466345.md, ../Pra%CC%81cticas%20Especi%CC%81ficas%203e22172ab8ed4ff2b3612a605de70f12/Realizar%20los%20ana%CC%81lisis%20sobre%20si%20hacer,%20comprar%20o%20r%204e3dfb6e8a8f4236b77729dfa26f3874.md
-Área de Proceso: ../A%CC%81reas%20de%20Proceso%2073cb7340a7e3493ba7b8c80a2ac773ba/Solucio%CC%81n%20Te%CC%81cnica%201d4c1df599364dbba61ba4e9e297d453.md

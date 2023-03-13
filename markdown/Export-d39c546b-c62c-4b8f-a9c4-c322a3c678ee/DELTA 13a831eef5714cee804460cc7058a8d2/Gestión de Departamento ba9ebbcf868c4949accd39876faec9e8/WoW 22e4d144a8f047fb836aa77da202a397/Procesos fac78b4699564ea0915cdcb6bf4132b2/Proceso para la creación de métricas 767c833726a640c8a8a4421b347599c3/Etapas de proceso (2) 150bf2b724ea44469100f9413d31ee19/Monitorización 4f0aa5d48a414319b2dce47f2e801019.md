@@ -1,3 +1,0 @@
-# Monitorización
-
-CMMI: MA
